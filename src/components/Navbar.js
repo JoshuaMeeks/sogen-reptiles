@@ -5,7 +5,8 @@ export const Navbar = () => {
   return (
     <header className="header">
       <nav>
-        <img src='#' alt='SoGen Reptiles'></img>
+        <img src='./resources/logo.png' alt='SoGen Reptiles' className='logo'></img>
+        <span>Southern Genetics</span>
         <ul>
           <li>available</li>
           <li>about</li>
