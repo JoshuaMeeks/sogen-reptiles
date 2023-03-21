@@ -6,8 +6,10 @@ export const Navbar = () => {
     <header className="header">
       <nav>
         <div className="logo">
-          <img src='./resources/logo.png' alt='SoGen Reptiles'></img>
-          <span>Southern Genetics</span>
+          <a href='#'>
+            <img src='./resources/logo.png' alt='SoGen Reptiles'></img>
+            <span>Southern Genetics</span>
+          </a>
         </div>
         <ul className='links'>
           <a href='#'><li>available</li></a>
