@@ -4,11 +4,37 @@ header {
   font-family: sans-serif;
 }
 
-.logo {
-  width: 40px;
-  height: auto;
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-ul {
+.logo {
+  display: flex;
+  /* align-items: center; */
+  gap: 1.6em;
+}
+
+.logo > img {
+  width: 50px;
+}
+
+.logo > span {
+  align-self: flex-end;
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 2em;
+}
+
+.links {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.6em;
+  list-style: none;
+}
+
+a {
+  color: #FFFFFF;
   text-decoration: none;
 }

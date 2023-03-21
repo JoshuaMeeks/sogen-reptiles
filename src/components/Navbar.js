@@ -5,14 +5,16 @@ export const Navbar = () => {
   return (
     <header className="header">
       <nav>
-        <img src='./resources/logo.png' alt='SoGen Reptiles' className='logo'></img>
-        <span>Southern Genetics</span>
-        <ul>
-          <li>available</li>
-          <li>about</li>
-          <li>contact</li>
-          <li>terms and conditions</li>
-          <li>shipping</li>
+        <div className="logo">
+          <img src='./resources/logo.png' alt='SoGen Reptiles'></img>
+          <span>Southern Genetics</span>
+        </div>
+        <ul className='links'>
+          <a href='#'><li>available</li></a>
+          <a href='#'><li>about</li></a>
+          <a href='#'><li>contact</li></a>
+          <a href='#'><li>terms and conditions</li></a>
+          <a href='#'><li>shipping</li></a>
         </ul>
       </nav>
     </header>
