@@ -3,8 +3,8 @@ import './Hero.css';
 
 export const Hero = () => {
   return (
-    <div className='hero-container'></div>
+    <div className='hero-container'>
+      {/* <button>available</button> */}
+    </div>
   )
 }
-
-{/* <img src="resources/hero.png" alt="Hero Image" className='hero-image'/> */}

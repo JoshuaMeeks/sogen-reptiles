@@ -2,6 +2,7 @@ header {
   background: linear-gradient(green, rgb(13, 44, 25));
   padding: 2em;
   font-family: sans-serif;
+  border-bottom: solid white 1px;
 }
 
 nav {
@@ -12,25 +13,27 @@ nav {
 .logo > a {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap: 1.5em;
 }
 
 .logo > a > img {
-  width: 40px;
+  width: 4em;
 }
 
 .logo > a > span {
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 400;
+  letter-spacing: .5em;
   color: #FFFFFF;
   font-size: 2.4em;
 }
 
 .links {
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 1.6em;
   list-style: none;
+  letter-spacing: .2em;
 }
 
 a {

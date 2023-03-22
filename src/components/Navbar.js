@@ -8,7 +8,7 @@ export const Navbar = () => {
         <div className="logo">
           <a href='#'>
             <img src='./resources/logo.png' alt='SoGen Reptiles'></img>
-            <span>Southern Genetics</span>
+            <span>Southern<br></br>Genetics</span>
           </a>
         </div>
         <ul className='links'>
