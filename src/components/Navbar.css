@@ -11,7 +11,6 @@ nav {
 
 .logo > a {
   display: flex;
-  align-items: end;
   align-items: center;
   gap: 2em;
 }
@@ -29,7 +28,7 @@ nav {
 
 .links {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 1.6em;
   list-style: none;
 }
