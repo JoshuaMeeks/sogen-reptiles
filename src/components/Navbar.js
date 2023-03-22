@@ -12,7 +12,6 @@ export const Navbar = () => {
           </a>
         </div>
         <ul className='links'>
-          <a href='#'><li>available</li></a>
           <a href='#'><li>about</li></a>
           <a href='#'><li>contact</li></a>
           <a href='#'><li>terms and conditions</li></a>

@@ -4,7 +4,7 @@ import './Hero.css';
 export const Hero = () => {
   return (
     <div className='hero-container'>
-      {/* <button>available</button> */}
+      <button>available</button>
     </div>
   )
 }

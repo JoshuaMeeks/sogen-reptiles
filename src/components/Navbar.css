@@ -1,8 +1,8 @@
 header {
-  background: linear-gradient(green, rgb(13, 44, 25));
-  padding: 2em;
+  background: linear-gradient(green, rgb(21, 82, 44));
+  padding: 1em 2em 1em 2em;
   font-family: sans-serif;
-  border-bottom: solid white 1px;
+  /* border-bottom: solid white 1px; */
 }
 
 nav {
@@ -13,11 +13,11 @@ nav {
 .logo > a {
   display: flex;
   align-items: center;
-  gap: 1.5em;
+  gap: 2em;
 }
 
 .logo > a > img {
-  width: 4em;
+  width: 2.4em;
 }
 
 .logo > a > span {
