@@ -10,10 +10,11 @@
 
 .hero-container > button {
   color: #FFFFFF;
-  background-color: rgb(174, 191, 16);
-  border-radius: 1em;
+  background-color: rgb(66, 75, 198);
+  border-radius: 5px;
   font-size: 2em;
   padding: .2em 1em .2em 1em;
-  border: none;
-  margin-top: 2em;
+  border: solid 3px #FFFFFF;
+  margin-top: 18em;
+  letter-spacing: .2em;
 }
