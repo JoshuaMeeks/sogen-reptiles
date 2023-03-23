@@ -1,0 +1,17 @@
+.title {
+  width: 15em;
+  color: rgb(21, 82, 44);
+  letter-spacing: .5em;
+  font-family: sans-serif;
+  margin-top: 3em;
+  text-align: center;
+  border-bottom: solid 2px rgb(21, 82, 44);
+}
+
+.card-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 30px;
+  padding-bottom: 5rem;
+}
