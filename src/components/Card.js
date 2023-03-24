@@ -4,7 +4,7 @@ import './Card.css';
 export const Card = () => {
   return (
     <div className='card'>
-      <img src="/IMG_0405.jpg" alt="name" />
+      <img src="./resources/IMG_0405.jpg" alt="name" />
       <div className="description">
         age weight sex<br/>
         price<br/>

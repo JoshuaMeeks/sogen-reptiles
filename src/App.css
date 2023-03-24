@@ -1,9 +1,28 @@
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-container > ul {
+  font-family: sans-serif;
+  letter-spacing: .4em;
+  color: rgb(21, 82, 44);
+  display: flex;
+  margin-bottom: 3em;
+  gap: 2em;
+}
+
+.title-container > ul > li {
+  list-style: none;
+}
+
 .title {
   width: 15em;
   color: rgb(21, 82, 44);
   letter-spacing: .5em;
   font-family: sans-serif;
-  margin-top: 3em;
+  margin: 3em 0 .4em 0;
   text-align: center;
   border-bottom: solid 2px rgb(21, 82, 44);
 }
