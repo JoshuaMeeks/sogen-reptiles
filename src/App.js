@@ -13,9 +13,9 @@ function App() {
       <div className="title-container">
         <h1 className="title">available</h1>
         <ul>
-          <a href="#"><li>all(12)</li></a>
+          <a href="#"><li>all(8)</li></a>
           <a href="#"><li>male(4)</li></a>
-          <a href="#"><li>female(8)</li></a>
+          <a href="#"><li>female(4)</li></a>
         </ul>
       </div>
       <div className="card-container">
