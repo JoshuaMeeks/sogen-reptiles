@@ -1,14 +1,17 @@
 import React from 'react'
 import './Card.css';
 
-export const Card = () => {
+
+export const Card = ({ img, weight, sexIcon, price }) => {
   return (
     <div className='card'>
-      <img src="./resources/IMG_0405.jpg" alt="name" />
+      <img src={img} alt="name" />
       <div className="description">
-        age weight sex<br/>
-        price<br/>
-        <button>Add to cart</button>
+        {sexIcon} weight: {weight}g<br/>
+        <div className='cart-container'>
+          ${price}<br/>
+          <button>Add to cart</button>
+        </div>
       </div>
     </div>
   )

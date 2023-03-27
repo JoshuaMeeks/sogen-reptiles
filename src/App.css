@@ -7,13 +7,16 @@
 .title-container > ul {
   font-family: sans-serif;
   letter-spacing: .4em;
-  color: rgb(21, 82, 44);
   display: flex;
   margin-bottom: 3em;
   gap: 2em;
 }
 
-.title-container > ul > li {
+.title-container > ul > a {
+  color: rgb(21, 82, 44);
+}
+
+.title-container > ul > a > li {
   list-style: none;
 }
 

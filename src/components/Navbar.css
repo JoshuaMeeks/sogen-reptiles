@@ -37,9 +37,10 @@ nav {
   gap: 1.6em;
   list-style: none;
   letter-spacing: .2em;
+  color: #FFFFFF;
 }
 
-a {
+.links > a {
   color: #FFFFFF;
   text-decoration: none;
 }
