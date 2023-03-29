@@ -5,7 +5,7 @@
   align-items: center;
   width: 300px;
   height: 300px;
-  background-color: #e2e8f0;
+  background-color: #000000;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
   transition: 500ms;
 }
@@ -14,6 +14,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 500ms;
 }
 
 .card:hover {
@@ -21,6 +22,15 @@
   cursor: pointer;
   transform: scale(1.1);
   transition: 500ms;
+}
+
+.card:hover > img {
+  transition: 500ms;
+  opacity: 0.8;
+}
+
+.view-btn {
+  display: block;
 }
 
 .description {
