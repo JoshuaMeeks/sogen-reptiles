@@ -29,8 +29,15 @@
   opacity: 0.8;
 }
 
-.view-btn {
+.card:hover .view-btn {
   display: block;
+}
+
+.view-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transition: 500ms;
 }
 
 .description {
@@ -41,9 +48,11 @@
 
 button {
   padding: .4em 1em .4em 1em;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: 500;
   color: #FFFFFF;
   border: none;
   background-color: rgb(61, 72, 226);
   cursor: pointer;
+  transition: 500ms;
 }
