@@ -19,7 +19,6 @@
 
 .card:hover {
   background-color: black;
-  cursor: pointer;
   transform: scale(1.1);
   transition: 500ms;
 }
@@ -33,20 +32,16 @@
   display: block;
 }
 
-.view-btn {
-  display: none;
-  position: absolute;
-  top: 50%;
-  transition: 500ms;
-}
-
 .description {
   font-weight: 600;
   width: 100%;
   padding: 1em;
 }
 
-button {
+.view-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
   padding: .4em 1em .4em 1em;
   font-size: 1em;
   font-weight: 500;
