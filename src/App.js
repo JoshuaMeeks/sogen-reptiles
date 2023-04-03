@@ -8,6 +8,13 @@ import { GiMale } from 'react-icons/gi';
 import { Route, Routes, Link } from "react-router-dom";
 
 function App() {
+  const data = 
+    [
+      "./resources/IMG_0403.jpg", "./resources/IMG_0413.jpg", 
+      "./resources/IMG_0405.jpg", "./resources/IMG_0408.jpg",
+      "./resources/IMG_0409.jpg", "./resources/IMG_0410.jpg",
+      "./resources/IMG_0411.jpg", "./resources/IMG_0412.jpg"
+    ]
   return (
     <>
       <Navbar />
@@ -32,30 +39,9 @@ function App() {
               </ul>
             </div>
             <div className="card-container">
-              <Card 
-                img={"./resources/IMG_0405.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0403.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0411.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0412.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0413.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0408.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0409.jpg"} 
-              />
-              <Card 
-                img={"./resources/IMG_0410.jpg"} 
-              />
+              {data.map((img) => {
+                return <Card img={img} />
+              })}
             </div>
           </>
         } />
