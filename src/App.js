@@ -1,22 +1,26 @@
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Card } from "./components/Card";
+import { Error } from "./components/Error";
 import './App.css';
 import { GiFemale } from 'react-icons/gi';
 import { GiMale } from 'react-icons/gi';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={
-          <>
+        <Route 
+          path="/" 
+          element={
             <Hero />
-          </>
-        } />
-        <Route path="/available" element={
+          } 
+        />
+        <Route 
+          path="/available" 
+          element={
           <>
             <div className="title-container">
               <h1 className="title">available</h1>
@@ -52,9 +56,14 @@ function App() {
                 img={"./resources/IMG_0410.jpg"} 
               />
             </div>
-
           </>
         } />
+        <Route 
+          path="/undefined" 
+          element={
+            <Error />
+          }
+        />
       </Routes>
     </>
   );
