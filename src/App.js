@@ -28,6 +28,7 @@ function App() {
                 <a href="#"><li>all(8)</li></a>
                 <a href="#"><li>male(4)</li></a>
                 <a href="#"><li>female(4)</li></a>
+                <a href="#"><li>unsexed(0)</li></a>
               </ul>
             </div>
             <div className="card-container">
