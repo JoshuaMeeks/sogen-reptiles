@@ -1,20 +1,13 @@
+import { useEffect, useState } from "react";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Card } from "./components/Card";
 import { Error } from "./components/Error";
 import './App.css';
-import { GiFemale } from 'react-icons/gi';
-import { GiMale } from 'react-icons/gi';
 import { Route, Routes, Link } from "react-router-dom";
+import data from './data.json';
 
 function App() {
-  const data = 
-    [
-      "./resources/IMG_0403.jpg", "./resources/IMG_0413.jpg", 
-      "./resources/IMG_0405.jpg", "./resources/IMG_0408.jpg",
-      "./resources/IMG_0409.jpg", "./resources/IMG_0410.jpg",
-      "./resources/IMG_0411.jpg", "./resources/IMG_0412.jpg"
-    ]
   return (
     <>
       <Navbar />
@@ -39,12 +32,20 @@ function App() {
               </ul>
             </div>
             <div className="card-container">
-              {data.map((img) => {
-                return <Card img={img} />
+              {data.map((data) => {
+                const {img, id} = data;
+                console.log(img);
+                return (
+                  <Card img={img} id={id} />
+                )
               })}
             </div>
           </>
         } />
+        <Route 
+          path="/available/:id" 
+          element={<h1>test</h1>} 
+        />
         <Route 
           path="/undefined" 
           element={
