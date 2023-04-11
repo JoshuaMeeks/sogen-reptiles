@@ -6,11 +6,13 @@ import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import './App.css';
 import { Route, Routes, Link } from "react-router-dom";
-import Availablity from './data.json';
+import data from './data.json';
 import { AppContext, useGlobalContext } from "./context";
 
 function App() {
   const available = useGlobalContext();
+  const [availability, setAvailability] = useState(data)
+
 
   return (
     <>
@@ -29,14 +31,14 @@ function App() {
             <div className="title-container">
               <h1 className="title">available</h1>
               <ul>
-                <li><a href='#'>all()</a></li>
+                <li onClick={() => setAvailability(data)}><a href='#'>all()</a></li>
                 <li><a href='#'>male()</a></li>
                 <li><a href='#'>female()</a></li>
                 <li><a href='#'>unsexed()</a></li>
               </ul>
             </div>
             <div className="card-container">
-              {Availablity.map(available => {
+              {availability.map(available => {
                 const { img, id } = available;
                 return (
                   <Card 
