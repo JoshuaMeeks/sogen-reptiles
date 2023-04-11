@@ -11,8 +11,10 @@ import { AppContext, useGlobalContext } from "./context";
 
 function App() {
   const available = useGlobalContext();
-  const [availability, setAvailability] = useState(data)
-
+  const [availability, setAvailability] = useState(data);
+  const [maleAvailability, setMaleAvailability] = useState(availability.filter(available => available.sex === 'male'));
+  const [femaleAvailability, setFemaleAvailability] = useState(availability.filter(available => available.sex === 'female'))
+  const [unsexedAvailability, setUnsexedAvailability] = useState(availability.filter(available => available.sex === 'unsexed'))
 
   return (
     <>
@@ -31,10 +33,10 @@ function App() {
             <div className="title-container">
               <h1 className="title">available</h1>
               <ul>
-                <li onClick={() => setAvailability(data)}><a href='#'>all()</a></li>
-                <li><a href='#'>male()</a></li>
-                <li><a href='#'>female()</a></li>
-                <li><a href='#'>unsexed()</a></li>
+                <li onClick={() => setAvailability(data)}><a href='#'>all({data.length})</a></li>
+                <li onClick={() => setAvailability(maleAvailability)}><a href='#'>male({maleAvailability.length})</a></li>
+                <li onClick={() => setAvailability(femaleAvailability)}><a href='#'>female({femaleAvailability.length})</a></li>
+                <li onClick={() => setAvailability(unsexedAvailability)}><a href='#'>unsexed({unsexedAvailability.length})</a></li>
               </ul>
             </div>
             <div className="card-container">
@@ -42,6 +44,7 @@ function App() {
                 const { img, id } = available;
                 return (
                   <Card 
+                    key={id}
                     img={img}
                     id={id}
                   />
