@@ -29,10 +29,10 @@ function App() {
             <div className="title-container">
               <h1 className="title">available</h1>
               <ul>
-                <a href="#"><li>all(8)</li></a>
-                <a href="#"><li>male(4)</li></a>
-                <a href="#"><li>female(4)</li></a>
-                <a href="#"><li>unsexed(0)</li></a>
+                <li><a href='#'>all()</a></li>
+                <li><a href='#'>male()</a></li>
+                <li><a href='#'>female()</a></li>
+                <li><a href='#'>unsexed()</a></li>
               </ul>
             </div>
             <div className="card-container">

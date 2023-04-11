@@ -12,12 +12,12 @@
   gap: 2em;
 }
 
-.title-container > ul > a {
-  color: rgb(21, 82, 44);
+.title-container > ul > li {
+  list-style: none;
 }
 
-.title-container > ul > a > li {
-  list-style: none;
+.title-container > ul > li > a {
+  color: rgb(21, 82, 44);
 }
 
 .title {
