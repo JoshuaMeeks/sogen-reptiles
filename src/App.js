@@ -3,11 +3,15 @@ import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Card } from "./components/Card";
 import { Error } from "./components/Error";
+import { Description } from "./components/Description";
 import './App.css';
 import { Route, Routes, Link } from "react-router-dom";
-import data from './data.json';
+import Availablity from './data.json';
+import { AppContext, useGlobalContext } from "./context";
 
 function App() {
+  const available = useGlobalContext();
+
   return (
     <>
       <Navbar />
@@ -32,11 +36,13 @@ function App() {
               </ul>
             </div>
             <div className="card-container">
-              {data.map((data) => {
-                const {img, id} = data;
-                console.log(img);
+              {Availablity.map(available => {
+                const { img, id } = available;
                 return (
-                  <Card img={img} id={id} />
+                  <Card 
+                    img={img}
+                    id={id}
+                  />
                 )
               })}
             </div>
@@ -44,10 +50,18 @@ function App() {
         } />
         <Route 
           path="/available/:id" 
-          element={<h1>test</h1>} 
+          element={
+            <Description available={available} />
+          } 
         />
         <Route 
           path="/undefined" 
+          element={
+            <Error />
+          }
+        />
+        <Route 
+          path="*" 
           element={
             <Error />
           }

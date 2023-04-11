@@ -3,48 +3,48 @@
   "id": "JC-022321",
   "img": "./resources/IMG_0403.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "1g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-041220",
   "img": "./resources/IMG_0413.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "2g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-072320",
   "img": "./resources/IMG_0405.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "3g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-041421",
   "img": "./resources/IMG_0408.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "4g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-062321",
   "img": "./resources/IMG_0409.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "5g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-082321",
   "img": "./resources/IMG_0410.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "6g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-092321",
   "img": "./resources/IMG_0411.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "7g"
   },
   {
-  "id": "JC-022321",
+  "id": "JC-102321",
   "img": "./resources/IMG_0412.jpg",
   "dob": "02/23/21",
-  "weight": "10g"
+  "weight": "8g"
   }
 ]
