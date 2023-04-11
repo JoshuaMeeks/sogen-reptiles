@@ -1,56 +1,56 @@
 [
   {
   "id": "JC-022321",
-  "img": "./resources/IMG_0403.jpg",
+  "img": "/resources/IMG_0403.jpg",
   "dob": "02/23/21",
   "weight": "1g",
   "sex": "male"
   },
   {
   "id": "JC-041220",
-  "img": "./resources/IMG_0413.jpg",
+  "img": "/resources/IMG_0413.jpg",
   "dob": "02/23/21",
   "weight": "2g",
   "sex": "female"
   },
   {
   "id": "JC-072320",
-  "img": "./resources/IMG_0405.jpg",
+  "img": "/resources/IMG_0405.jpg",
   "dob": "02/23/21",
   "weight": "3g",
   "sex": "male"
   },
   {
   "id": "JC-041421",
-  "img": "./resources/IMG_0408.jpg",
+  "img": "/resources/IMG_0408.jpg",
   "dob": "02/23/21",
   "weight": "4g",
   "sex": "female"
   },
   {
   "id": "JC-062321",
-  "img": "./resources/IMG_0409.jpg",
+  "img": "/resources/IMG_0409.jpg",
   "dob": "02/23/21",
   "weight": "5g",
   "sex": "male"
   },
   {
   "id": "JC-082321",
-  "img": "./resources/IMG_0410.jpg",
+  "img": "/resources/IMG_0410.jpg",
   "dob": "02/23/21",
   "weight": "6g",
   "sex": "female"
   },
   {
   "id": "JC-092321",
-  "img": "./resources/IMG_0411.jpg",
+  "img": "/resources/IMG_0411.jpg",
   "dob": "02/23/21",
   "weight": "7g",
   "sex": "male"
   },
   {
   "id": "JC-102321",
-  "img": "./resources/IMG_0412.jpg",
+  "img": "/resources/IMG_0412.jpg",
   "dob": "02/23/21",
   "weight": "8g",
   "sex": "female"

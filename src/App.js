@@ -13,8 +13,9 @@ function App() {
   const available = useGlobalContext();
   const [availability, setAvailability] = useState(data);
   const [maleAvailability, setMaleAvailability] = useState(availability.filter(available => available.sex === 'male'));
-  const [femaleAvailability, setFemaleAvailability] = useState(availability.filter(available => available.sex === 'female'))
-  const [unsexedAvailability, setUnsexedAvailability] = useState(availability.filter(available => available.sex === 'unsexed'))
+  const [femaleAvailability, setFemaleAvailability] = useState(availability.filter(available => available.sex === 'female'));
+  const [unsexedAvailability, setUnsexedAvailability] = useState(availability.filter(available => available.sex === 'unsexed'));
+  const [currentSelection, setCurrentSelection] = useState({});
 
   return (
     <>
@@ -23,7 +24,10 @@ function App() {
         <Route 
           path="/" 
           element={
-            <Hero />
+            <Hero 
+              setAvailability={setAvailability}
+              data={data}
+            />
           } 
         />
         <Route 
@@ -41,12 +45,13 @@ function App() {
             </div>
             <div className="card-container">
               {availability.map(available => {
-                const { img, id } = available;
+                // const { img, id } = available;
                 return (
                   <Card 
-                    key={id}
-                    img={img}
-                    id={id}
+                    // onClick={setCurrentSelection(available)}
+                    key={available.id}
+                    img={available.img}
+                    id={available.id}
                   />
                 )
               })}
@@ -56,7 +61,11 @@ function App() {
         <Route 
           path="/available/:id" 
           element={
-            <Description available={available} />
+            <>
+              <Description 
+                availability={availability}
+              />
+            </>
           } 
         />
         <Route 

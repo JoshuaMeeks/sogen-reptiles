@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 export const Card = ({ img, id }) => {
+
   return (
     <Link to={"/available/" + id}>
       <div className='card'>
