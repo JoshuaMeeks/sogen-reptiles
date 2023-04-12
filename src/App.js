@@ -45,10 +45,8 @@ function App() {
             </div>
             <div className="card-container">
               {availability.map(available => {
-                // const { img, id } = available;
                 return (
                   <Card 
-                    // onClick={setCurrentSelection(available)}
                     key={available.id}
                     img={available.img}
                     id={available.id}

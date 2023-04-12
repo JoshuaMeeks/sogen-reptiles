@@ -1,10 +1,28 @@
 .description-container {
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
-  margin: 4em 0 4em 0;
+  margin: 6em 0 6em 0;
   gap: 2em;
 }
 
 .description {
   width: 30em;
+}
+
+.description > * {
+  margin: 1rem;
+}
+
+.description > button {
+  width: 20em;
+  background-color: dodgerblue;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: .6em;
+}
+
+.description > button {
+  cursor: pointer;
 }
