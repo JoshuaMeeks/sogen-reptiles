@@ -2,7 +2,7 @@
   font-family: sans-serif;
   display: flex;
   justify-content: center;
-  margin: 6em 0 6em 0;
+  margin: 2em 0 10em 0;
   gap: 2em;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .description > button {
-  width: 20em;
+  width: 100%;
   background-color: dodgerblue;
   border: none;
   color: #ffffff;
@@ -26,4 +26,21 @@
 
 .description > button {
   cursor: pointer;
+}
+
+.description > h1 {
+  text-align: center;
+  color: rgb(21, 82, 44);
+  letter-spacing: .5em;
+  font-size: 1.4em;
+}
+
+.description > p {
+  color: rgb(21, 82, 44);
+}
+
+@media (max-width: 500px) {
+  .description-container {
+    display: block;
+  }
 }

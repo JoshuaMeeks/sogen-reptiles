@@ -8,6 +8,7 @@ import './App.css';
 import { Route, Routes, Link } from "react-router-dom";
 import data from './data.json';
 import { AppContext, useGlobalContext } from "./context";
+import { Footer } from "./components/Footer";
 
 function App() {
   const available = useGlobalContext();
@@ -63,13 +64,13 @@ function App() {
               <div className="title-container">
                 <h1 className="title">available</h1>
                 <ul>
-                  <li onClick={() => setAvailability(data)}><a href='#'>all({data.length})</a></li>
-                  <li onClick={() => setAvailability(maleAvailability)}><a href='#'>male({maleAvailability.length})</a></li>
-                  <li onClick={() => setAvailability(femaleAvailability)}><a href='#'>female({femaleAvailability.length})</a></li>
-                  <li onClick={() => setAvailability(unsexedAvailability)}><a href='#'>unsexed({unsexedAvailability.length})</a></li>
+                  <li onClick={() => setAvailability(data)}><a href='/available'>all({data.length})</a></li>
+                  <li onClick={() => setAvailability(maleAvailability)}><a href='/available'>male({maleAvailability.length})</a></li>
+                  <li onClick={() => setAvailability(femaleAvailability)}><a href='/available'>female({femaleAvailability.length})</a></li>
+                  <li onClick={() => setAvailability(unsexedAvailability)}><a href='/available'>unsexed({unsexedAvailability.length})</a></li>
                 </ul>
               </div>
-              <Description 
+              <Description
                 availability={availability}
               />
             </>
@@ -88,6 +89,7 @@ function App() {
           }
         />
       </Routes>
+      <Footer />
     </>
   );
 }
