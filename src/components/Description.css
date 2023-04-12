@@ -8,6 +8,7 @@
 
 .description {
   width: 30em;
+  font-weight: 400;
 }
 
 .description > * {

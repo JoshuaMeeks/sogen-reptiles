@@ -60,6 +60,15 @@ function App() {
           path="/available/:id" 
           element={
             <>
+              <div className="title-container">
+                <h1 className="title">available</h1>
+                <ul>
+                  <li onClick={() => setAvailability(data)}><a href='#'>all({data.length})</a></li>
+                  <li onClick={() => setAvailability(maleAvailability)}><a href='#'>male({maleAvailability.length})</a></li>
+                  <li onClick={() => setAvailability(femaleAvailability)}><a href='#'>female({femaleAvailability.length})</a></li>
+                  <li onClick={() => setAvailability(unsexedAvailability)}><a href='#'>unsexed({unsexedAvailability.length})</a></li>
+                </ul>
+              </div>
               <Description 
                 availability={availability}
               />
