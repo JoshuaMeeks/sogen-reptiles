@@ -2,7 +2,7 @@ header {
   background: linear-gradient(green, rgb(21, 82, 44));
   padding: 1em 2em 1em 2em;
   font-family: sans-serif;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5); */
   position: relative;
   z-index: 1;
 }

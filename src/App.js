@@ -19,7 +19,7 @@ function App() {
   const [currentSelection, setCurrentSelection] = useState({});
 
   return (
-    <>
+    <div className="main-container">
       <Navbar />
       <Routes>
         <Route 
@@ -60,7 +60,7 @@ function App() {
         <Route 
           path="/available/:id" 
           element={
-            <>
+            <div className="main-container">
               <div className="title-container">
                 <h1 className="title">available</h1>
                 <ul>
@@ -73,7 +73,7 @@ function App() {
               <Description
                 availability={availability}
               />
-            </>
+            </div>
           } 
         />
         <Route 
@@ -90,7 +90,7 @@ function App() {
         />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 
