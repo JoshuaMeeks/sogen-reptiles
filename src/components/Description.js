@@ -12,8 +12,14 @@ export const Description = ({ availability }) => {
   return (
     <div className="description-container">
       <ImageCarousel 
-        availability={availability}
+        available={available}
       />
+      <div className='description'>
+        <h1>{available[0].id}</h1>
+        <p>Sex: {available[0].sex}</p>
+        <p>D.O.B: {available[0].dob}</p>
+        <p>Weight: {available[0].weight}</p>
+      </div>
       {/* <img src={available[0].img} alt={available[0].id} /> */}
     </div>
   )
