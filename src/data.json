@@ -1,62 +1,62 @@
 [
   {
-  "id": "JC-022321",
-  "morph": "Yellow Lilly White",
-  "img": "/resources/IMG_0403.jpg",
-  "dob": "02/23/21",
-  "weight": "14g",
-  "sex": "male",
-  "descriptor": "The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/esl",
-  "price": "1200"
+    "id": "JC-022321",
+    "morph": "Yellow Lilly White",
+    "img": "/resources/IMG_0403.jpg",
+    "dob": "02/23/21",
+    "weight": "14g",
+    "sex": "male",
+    "descriptor": "The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/esl",
+    "price": "1200"
   },
   {
-  "id": "JC-041220",
-  "morph": "Darkbase Harlequin",
-  "img": "/resources/IMG_0413.jpg",
-  "dob": "02/23/21",
-  "weight": "2g",
-  "sex": "female"
+    "id": "JC-041220",
+    "morph": "Darkbase Harlequin",
+    "img": "/resources/IMG_0413.jpg",
+    "dob": "02/23/21",
+    "weight": "2g",
+    "sex": "female"
   },
   {
-  "id": "JC-072320",
-  "img": "/resources/IMG_0405.jpg",
-  "dob": "02/23/21",
-  "weight": "3g",
-  "sex": "male"
+    "id": "JC-072320",
+    "img": "/resources/IMG_0405.jpg",
+    "dob": "02/23/21",
+    "weight": "3g",
+    "sex": "male"
   },
   {
-  "id": "JC-041421",
-  "img": "/resources/IMG_0408.jpg",
-  "dob": "02/23/21",
-  "weight": "4g",
-  "sex": "female"
+    "id": "JC-041421",
+    "img": "/resources/IMG_0408.jpg",
+    "dob": "02/23/21",
+    "weight": "4g",
+    "sex": "female"
   },
   {
-  "id": "JC-062321",
-  "img": "/resources/IMG_0409.jpg",
-  "dob": "02/23/21",
-  "weight": "5g",
-  "sex": "male"
+    "id": "JC-062321",
+    "img": "/resources/IMG_0409.jpg",
+    "dob": "02/23/21",
+    "weight": "5g",
+    "sex": "male"
   },
   {
-  "id": "JC-082321",
-  "img": "/resources/IMG_0410.jpg",
-  "dob": "02/23/21",
-  "weight": "6g",
-  "sex": "female"
+    "id": "JC-082321",
+    "img": "/resources/IMG_0410.jpg",
+    "dob": "02/23/21",
+    "weight": "6g",
+    "sex": "female"
   },
   {
-  "id": "JC-092321",
-  "img": "/resources/IMG_0411.jpg",
-  "dob": "02/23/21",
-  "weight": "7g",
-  "sex": "male"
+    "id": "JC-092321",
+    "img": "/resources/IMG_0411.jpg",
+    "dob": "02/23/21",
+    "weight": "7g",
+    "sex": "male"
   },
   {
-  "id": "JC-102321",
-  "img": "/resources/IMG_0412.jpg",
-  "dob": "02/23/21",
-  "weight": "8g",
-  "sex": "female"
+    "id": "JC-102321",
+    "img": "/resources/IMG_0412.jpg",
+    "dob": "02/23/21",
+    "weight": "8g",
+    "sex": "female"
   }
 ]
