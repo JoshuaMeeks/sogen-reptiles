@@ -8,13 +8,13 @@ import './App.css';
 import { Route, Routes, Link } from "react-router-dom";
 import data from './data.json';
 import { Footer } from "./components/Footer";
+import { Availability } from "./components/Availability";
 
 function App() {
   const [availability, setAvailability] = useState(data);
   const [maleAvailability, setMaleAvailability] = useState(availability.filter(available => available.sex === 'male'));
   const [femaleAvailability, setFemaleAvailability] = useState(availability.filter(available => available.sex === 'female'));
   const [unsexedAvailability, setUnsexedAvailability] = useState(availability.filter(available => available.sex === 'unsexed'));
-  const [currentSelection, setCurrentSelection] = useState({});
 
   return (
     <div className="main-container">
@@ -33,15 +33,13 @@ function App() {
           path="/available" 
           element={
           <>
-            <div className="title-container">
-              <h1 className="title">available</h1>
-              <ul>
-                <li onClick={() => setAvailability(data)}><a href='#'>all({data.length})</a></li>
-                <li onClick={() => setAvailability(maleAvailability)}><a href='#'>male({maleAvailability.length})</a></li>
-                <li onClick={() => setAvailability(femaleAvailability)}><a href='#'>female({femaleAvailability.length})</a></li>
-                <li onClick={() => setAvailability(unsexedAvailability)}><a href='#'>unsexed({unsexedAvailability.length})</a></li>
-              </ul>
-            </div>
+            <Availability 
+              data={data}
+              setAvailability={setAvailability} 
+              maleAvailability={maleAvailability}
+              femaleAvailability={femaleAvailability}
+              unsexedAvailability={unsexedAvailability}
+            />
             <div className="card-container">
               {availability.map(available => {
                 return (
@@ -59,15 +57,13 @@ function App() {
           path="/available/:id" 
           element={
             <div className="main-container">
-              <div className="title-container">
-                <h1 className="title">available</h1>
-                <ul>
-                  <li onClick={() => setAvailability(data)}><a href='/available'>all({data.length})</a></li>
-                  <li onClick={() => setAvailability(maleAvailability)}><a href='/available'>male({maleAvailability.length})</a></li>
-                  <li onClick={() => setAvailability(femaleAvailability)}><a href='/available'>female({femaleAvailability.length})</a></li>
-                  <li onClick={() => setAvailability(unsexedAvailability)}><a href='/available'>unsexed({unsexedAvailability.length})</a></li>
-                </ul>
-              </div>
+              <Availability 
+              data={data}
+              setAvailability={setAvailability} 
+              maleAvailability={maleAvailability}
+              femaleAvailability={femaleAvailability}
+              unsexedAvailability={unsexedAvailability}
+              />
               <Description
                 availability={availability}
               />

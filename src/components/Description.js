@@ -2,7 +2,6 @@ import React from 'react'
 import "./Description.css";
 import { useParams } from 'react-router-dom'; 
 import { ImageCarousel } from './ImageCarousel';
-// import { useGlobalContext } from '../context';
 
 export const Description = ({ availability }) => {
   const { id } = useParams();
@@ -23,7 +22,6 @@ export const Description = ({ availability }) => {
         <p>{available[0].descriptor}</p>
         <button>Add to Cart</button>
       </div>
-      {/* <img src={available[0].img} alt={available[0].id} /> */}
     </div>
   )
 }
