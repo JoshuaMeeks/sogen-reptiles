@@ -5,16 +5,25 @@ import { Card } from "./components/Card";
 import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import './App.css';
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import data from './data.json';
 import { Footer } from "./components/Footer";
 import { Availability } from "./components/Availability";
 
 function App() {
   const [availability, setAvailability] = useState(data);
-  const [maleAvailability, setMaleAvailability] = useState(availability.filter(available => available.sex === 'male'));
-  const [femaleAvailability, setFemaleAvailability] = useState(availability.filter(available => available.sex === 'female'));
-  const [unsexedAvailability, setUnsexedAvailability] = useState(availability.filter(available => available.sex === 'unsexed'));
+
+  const maleAvailability = () => {
+    setAvailability(data.filter(available => available.sex === 'male'))
+  }
+
+  const femaleAvailability = () => {
+    setAvailability(data.filter(available => available.sex === 'female'))
+  }
+
+  const unsexedAvailability = () => {
+    setAvailability(data.filter(available => available.sex === 'unsexed'))
+  }
 
   return (
     <div className="main-container">
@@ -35,6 +44,7 @@ function App() {
           <>
             <Availability 
               data={data}
+              availability={availability}
               setAvailability={setAvailability} 
               maleAvailability={maleAvailability}
               femaleAvailability={femaleAvailability}
@@ -60,7 +70,7 @@ function App() {
               <Availability 
               data={data}
               setAvailability={setAvailability} 
-              maleAvailability={maleAvailability}
+              // maleAvailability={maleAvailability}
               femaleAvailability={femaleAvailability}
               unsexedAvailability={unsexedAvailability}
               />
