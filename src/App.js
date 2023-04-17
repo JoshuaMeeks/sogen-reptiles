@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Card } from "./components/Card";
@@ -7,11 +7,9 @@ import { Description } from "./components/Description";
 import './App.css';
 import { Route, Routes, Link } from "react-router-dom";
 import data from './data.json';
-import { AppContext, useGlobalContext } from "./context";
 import { Footer } from "./components/Footer";
 
 function App() {
-  const available = useGlobalContext();
   const [availability, setAvailability] = useState(data);
   const [maleAvailability, setMaleAvailability] = useState(availability.filter(available => available.sex === 'male'));
   const [femaleAvailability, setFemaleAvailability] = useState(availability.filter(available => available.sex === 'female'));
