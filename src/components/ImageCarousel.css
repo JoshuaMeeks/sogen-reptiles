@@ -1,0 +1,19 @@
+.carousel-container {
+}
+
+.selected-img {
+  width: 25em;
+}
+
+.unselected-img-container {
+  text-align: center;
+}
+
+.unselected-img {
+  margin: .6em;
+  width: 3em;
+}
+
+.unselected-img:hover {
+  cursor: pointer;
+}
