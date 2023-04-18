@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import './App.css';
+import data from './data.json';
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Card } from "./components/Card";
 import { Error } from "./components/Error";
 import { Description } from "./components/Description";
-import './App.css';
-import { Route, Routes } from "react-router-dom";
-import data from './data.json';
 import { Footer } from "./components/Footer";
 import { Availability } from "./components/Availability";
 
@@ -26,73 +26,74 @@ function App() {
   }
 
   return (
-    <div className="main-container">
+    <div className="page-container">
       <Navbar />
-      <Routes>
-        <Route 
-          path="/" 
-          element={
-            <Hero 
-              setAvailability={setAvailability}
-              data={data}
-            />
-          } 
-        />
-        <Route 
-          path="/available" 
-          element={
-          <>
-            <Availability 
-              data={data}
-              availability={availability}
-              setAvailability={setAvailability} 
-              maleAvailability={maleAvailability}
-              femaleAvailability={femaleAvailability}
-              unsexedAvailability={unsexedAvailability}
-            />
-            <div className="card-container">
-              {availability.map(available => {
-                return (
-                  <Card 
-                    key={available.id}
-                    img={available.img}
-                    id={available.id}
-                  />
-                )
-              })}
-            </div>
-          </>
-        } />
-        <Route 
-          path="/available/:id" 
-          element={
-            <div className="main-container">
+      <div className="content">
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <Hero 
+                setAvailability={setAvailability}
+                data={data}
+              />
+            } 
+          />
+          <Route 
+            path="/available" 
+            element={
+            <>
               <Availability 
-              data={data}
-              setAvailability={setAvailability} 
-              // maleAvailability={maleAvailability}
-              femaleAvailability={femaleAvailability}
-              unsexedAvailability={unsexedAvailability}
+                data={data}
+                setAvailability={setAvailability} 
+                maleAvailability={maleAvailability}
+                femaleAvailability={femaleAvailability}
+                unsexedAvailability={unsexedAvailability}
               />
-              <Description
-                availability={availability}
-              />
-            </div>
-          } 
-        />
-        <Route 
-          path="/undefined" 
-          element={
-            <Error />
-          }
-        />
-        <Route 
-          path="*" 
-          element={
-            <Error />
-          }
-        />
-      </Routes>
+              <div className="card-container">
+                {availability.map(available => {
+                  return (
+                    <Card 
+                      key={available.id}
+                      img={available.img}
+                      id={available.id}
+                    />
+                  )
+                })}
+              </div>
+            </>
+          } />
+          <Route 
+            path="/available/:id" 
+            element={
+              <div className="main-container">
+                <Availability 
+                data={data}
+                setAvailability={setAvailability} 
+                maleAvailability={maleAvailability}
+                femaleAvailability={femaleAvailability}
+                unsexedAvailability={unsexedAvailability}
+                />
+                <Description
+                  availability={availability}
+                />
+              </div>
+            } 
+          />
+          <Route 
+            path="/undefined" 
+            element={
+              <Error />
+            }
+          />
+          <Route 
+            path="*" 
+            element={
+              <Error />
+            }
+          />
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
