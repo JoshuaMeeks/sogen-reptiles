@@ -6,7 +6,7 @@ export const Hero = ({setAvailability, data}) => {
   return (
     <div className='hero-container'>
       <Link to="/available">
-        <button onClick={setAvailability(data)} class='available-btn'>available</button>
+        {/* <button onClick={setAvailability(data)} class='available-btn'>available</button> */}
       </Link>
     </div>
   )

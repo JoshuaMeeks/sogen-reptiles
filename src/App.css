@@ -35,11 +35,16 @@
   color: rgb(21, 82, 44);
 }
 
+.title-container > ul > li > a {
+  color: rgb(21, 82, 44);
+}
+
 .title {
   width: 15em;
   color: rgb(21, 82, 44);
   letter-spacing: .5em;
   font-family: sans-serif;
+  padding-bottom: .2em;
   margin: 3em 0 .4em 0;
   text-align: center;
   border-bottom: solid 2px rgb(21, 82, 44);

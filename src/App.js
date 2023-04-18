@@ -5,6 +5,9 @@ import data from './data.json';
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/About";
+import { Contact } from "./components/Contact";
+import { TermsConditions } from "./components/TermsConditions";
+import { Shipping } from "./components/Shipping";
 import { Card } from "./components/Card";
 import { Error } from "./components/Error";
 import { Description } from "./components/Description";
@@ -44,6 +47,24 @@ function App() {
             path="/about"
             element={
               <About />
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Contact />
+            }
+          />
+          <Route
+            path="/termsconditions"
+            element={
+              <TermsConditions />
+            }
+          />
+          <Route
+            path="/shipping"
+            element={
+              <Shipping />
             }
           />
           <Route 

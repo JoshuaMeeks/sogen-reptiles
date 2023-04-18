@@ -15,10 +15,11 @@ export const Navbar = () => {
           </div>
         </Link>
         <ul className='links'>
-          <a href='#'><li>about</li></a>
-          <a href='#'><li>contact</li></a>
-          <a href='#'><li>terms and conditions</li></a>
-          <a href='#'><li>shipping</li></a>
+          <Link to="/about"><li>about</li></Link>
+          <Link to="/available"><li>available</li></Link>
+          <Link to="/contact"><li>contact</li></Link>
+          <Link to="/termsconditions"><li>terms and conditions</li></Link>
+          <Link to="/shipping"><li>shipping</li></Link>
         </ul>
       </nav>
     </header>
