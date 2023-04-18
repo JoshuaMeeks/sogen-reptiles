@@ -4,6 +4,7 @@ import './App.css';
 import data from './data.json';
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
+import { About } from "./components/About";
 import { Card } from "./components/Card";
 import { Error } from "./components/Error";
 import { Description } from "./components/Description";
@@ -38,6 +39,12 @@ function App() {
                 data={data}
               />
             } 
+          />
+          <Route
+            path="/about"
+            element={
+              <About />
+            }
           />
           <Route 
             path="/available" 
