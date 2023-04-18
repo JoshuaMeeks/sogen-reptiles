@@ -83,7 +83,7 @@ function App() {
                   return (
                     <Card 
                       key={available.id}
-                      img={available.img}
+                      imgs={available.imgs}
                       id={available.id}
                     />
                   )
