@@ -2,7 +2,7 @@ import React from 'react'
 
 export const About = () => {
   return (
-    <div className="about-container">
+    <div className="title-container">
       <h1 className='title'>about us</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque laboriosam assumenda numquam at fugiat maxime, nam quod deserunt itaque ducimus natus est obcaecati accusantium, eius perspiciatis modi, possimus illum eaque.
       Dolorum voluptatum modi libero sint accusantium temporibus blanditiis ad, quidem numquam. Maxime numquam libero esse minima fuga modi eos at nemo est distinctio nulla optio quisquam aliquid quaerat, neque vero.
