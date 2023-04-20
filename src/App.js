@@ -30,7 +30,11 @@ function App() {
     setAvailability(data.filter(available => available.sex === 'unsexed'))
   }
 
-  const [modal, setModal] = useState(true)
+  const [modal, setModal] = useState(true);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  }
 
   return (
     <div className="page-container">
@@ -109,6 +113,7 @@ function App() {
                   availability={availability}
                   modal={modal}
                   setModal={setModal}
+                  toggleModal={toggleModal}
                 />
               </div>
             } 

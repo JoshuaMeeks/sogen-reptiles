@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { ImageCarousel } from './ImageCarousel';
 import { ImgModal } from './ImgModal';
 
-export const Description = ({ availability, modal, setModal }) => {
+export const Description = ({ availability, modal, setModal, toggleModal }) => {
   const { id } = useParams();
 
   const available = availability.filter(available => available.id === id)
@@ -20,6 +20,7 @@ export const Description = ({ availability, modal, setModal }) => {
         available={available}
         modal={modal}
         setModal={setModal}
+        toggleModal={toggleModal}
       />
       <div className='description'>
         <h1>{available[0].morph}</h1>
