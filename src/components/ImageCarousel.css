@@ -1,6 +1,3 @@
-.carousel-container {
-}
-
 .selected-img {
   width: 25em;
 }
@@ -11,9 +8,10 @@
 
 .unselected-img {
   margin: .6em;
-  width: 3em;
+  width: 5em;
+  height: 5em;
 }
 
-.unselected-img:hover {
+.selected-img, .unselected-img {
   cursor: pointer;
 }

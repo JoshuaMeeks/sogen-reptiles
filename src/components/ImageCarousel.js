@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ImageCarousel.css';
 
-export const ImageCarousel = ({ available }) => {
+export const ImageCarousel = ({ available, modal, setModal }) => {
   const {imgs} = available[0]  
   const [selected, setSelected] = useState(imgs[0])
   const [unselected, setUnselected] = useState(imgs.filter(img => img !== selected))
@@ -12,7 +12,7 @@ export const ImageCarousel = ({ available }) => {
 
   return (
     <div className='carousel-container'>
-      <img className='selected-img' src={selected} alt="gecko" />
+      <img className='selected-img' src={selected} alt="gecko" onClick={() => setModal(!modal)} />
       <div className="unselected-img-container">
         {unselected.map(img => {
           return (

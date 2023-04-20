@@ -13,6 +13,7 @@ import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import { Footer } from "./components/Footer";
 import { Availability } from "./components/Availability";
+import { ImgModal } from "./components/ImgModal";
 
 function App() {
   const [availability, setAvailability] = useState(data);
@@ -28,6 +29,8 @@ function App() {
   const unsexedAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'unsexed'))
   }
+
+  const [modal, setModal] = useState(true)
 
   return (
     <div className="page-container">
@@ -94,7 +97,7 @@ function App() {
           <Route 
             path="/available/:id" 
             element={
-              <div className="main-container">
+              <div className="product-container">
                 <Availability 
                 data={data}
                 setAvailability={setAvailability} 
@@ -104,6 +107,8 @@ function App() {
                 />
                 <Description
                   availability={availability}
+                  modal={modal}
+                  setModal={setModal}
                 />
               </div>
             } 
