@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './ImageCarousel.css';
 
-export const ImageCarousel = ({ available, modal, setModal }) => {
-  const {imgs} = available[0]  
-  const [selected, setSelected] = useState(imgs[0])
-  const [unselected, setUnselected] = useState(imgs.filter(img => img !== selected))
-
-  useEffect(() => {
-    setUnselected(imgs.filter(img => img !== selected))
-  }, selected)
+export const ImageCarousel = ({ selected, setSelected, unselected, modal, setModal }) => {  
 
   return (
     <div className='carousel-container'>
@@ -20,6 +13,6 @@ export const ImageCarousel = ({ available, modal, setModal }) => {
           )
         })}
       </div>
-    </div>
+    </div>    
   )
 }

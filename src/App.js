@@ -13,7 +13,6 @@ import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import { Footer } from "./components/Footer";
 import { Availability } from "./components/Availability";
-import { ImgModal } from "./components/ImgModal";
 
 function App() {
   const [availability, setAvailability] = useState(data);

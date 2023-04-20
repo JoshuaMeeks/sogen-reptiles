@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './ImgModal.css';
 
-export const ImgModal = ({ available, modal, toggleModal }) => {
-  const {imgs} = available[0]  
-  const [selected, setSelected] = useState(imgs[0])
-  const [unselected, setUnselected] = useState(imgs.filter(img => img !== selected))
-
-  useEffect(() => {
-    setUnselected(imgs.filter(img => img !== selected))
-  }, selected)
+export const ImgModal = ({ modal, selected, setSelected, unselected, toggleModal }) => {
 
   if (modal) {
     return (
