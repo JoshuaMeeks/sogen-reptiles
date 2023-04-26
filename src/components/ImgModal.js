@@ -4,6 +4,7 @@ import './ImgModal.css';
 export const ImgModal = ({ modal, selected, setSelected, unselected, toggleModal }) => {
 
   if (modal) {
+    document.querySelector('body').style.overflow = "hidden";
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
     return (
@@ -20,5 +21,8 @@ export const ImgModal = ({ modal, selected, setSelected, unselected, toggleModal
         </div>
       </div>
     )
+  }
+  if (!modal) {
+    document.querySelector('body').style.overflow = "";
   }
 }
