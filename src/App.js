@@ -16,24 +16,19 @@ import { Availability } from "./components/Availability";
 
 function App() {
   const [availability, setAvailability] = useState(data);
-
   const maleAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'male'))
-  }
-
+  };
   const femaleAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'female'))
-  }
-
+  };
   const unsexedAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'unsexed'))
-  }
-
+  };
   const [modal, setModal] = useState(true);
-
   const toggleModal = () => {
     setModal(!modal);
-  }
+  };
 
   return (
     <div className="page-container">
