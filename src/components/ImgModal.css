@@ -11,6 +11,21 @@
   z-index: 1;
 }
 
+.modal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 2em;
+  width: 1em;
+  align-self: end;
+  cursor: pointer;
+}
+
 .modal-selected-img {
   width: 40em;
 }

@@ -10,6 +10,7 @@ export const ImgModal = ({ modal, selected, setSelected, unselected, toggleModal
     return (
       <div className='modal-background' onClick={() => toggleModal()}>
         <div className='modal-container' onClick={e => e.stopPropagation()}>
+          <button className='close-btn' onClick={toggleModal}>&times;</button>
           <img className='modal-selected-img' src={selected} alt="gecko" />
           {/* <div className="unselected-img-container">
             {unselected.map(img => {
