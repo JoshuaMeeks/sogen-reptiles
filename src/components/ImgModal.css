@@ -16,6 +16,11 @@
   flex-direction: column;
 }
 
+.modal-container > div {
+  display: flex;
+  align-items: center;
+}
+
 .close-btn {
   background: none;
   border: none;
@@ -24,6 +29,13 @@
   width: 1em;
   align-self: end;
   cursor: pointer;
+  margin-right: 2em;
+}
+
+.chevron {
+  color: #ffffff;
+  font-size: 4em;
+
 }
 
 .modal-selected-img {
