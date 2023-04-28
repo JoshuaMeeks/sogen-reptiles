@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ImgModal.css';
 import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
@@ -6,6 +6,10 @@ export const ImgModal = ({ modal, selected, unselected, toggleModal }) => {
   const [modalSelected, setModalSelected] = useState(selected);
   const completeImageList = [selected, ...unselected];
   let currentIndex = completeImageList.indexOf(modalSelected)
+
+  useEffect(() => {
+    setModalSelected(selected);
+  }, selected)
 
   const nextImage = () => {
     if (currentIndex + 1 >= completeImageList.length) {
@@ -31,7 +35,7 @@ export const ImgModal = ({ modal, selected, unselected, toggleModal }) => {
     return (
       <div className='modal-background' onClick={() => toggleModal()}>
         <div className='modal-container' onClick={e => e.stopPropagation()}>
-          <button className='close-btn' onClick={toggleModal}>&times;</button>
+          <button className='close-btn' onClick={() => toggleModal()}>&times;</button>
           <div>
             <BsChevronLeft className='chevron' onClick={() => previousImage()} />
             <img className='modal-selected-img' src={modalSelected} alt="gecko" />
