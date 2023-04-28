@@ -35,7 +35,7 @@
 .chevron {
   color: #ffffff;
   font-size: 4em;
-
+  cursor: pointer;
 }
 
 .modal-selected-img {
