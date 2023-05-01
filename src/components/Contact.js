@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Contact.css';
 
 export const Contact = () => {
   const [status, setStatus] = useState("Submit");
@@ -26,9 +27,11 @@ export const Contact = () => {
   return (
     <div className="title-container">
       <h1 className="title">contact us</h1>
-      <p>You can contact us via email at <a href="#">contact@sogenreptiles.com</a> or visit our Instagram page at <a href="#">SoGen Reptiles</a></p>
+      <p>
+        You can contact us via email at <a href="#">contact@sogenreptiles.com</a>, or fill out this form:
+      </p>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='contact-form'>
         <div>
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" required />
@@ -43,6 +46,8 @@ export const Contact = () => {
         </div>
         <button type="submit">{status}</button>
       </form>
+
+      <p>Visit us on <a href='https://www.instagram.com/southerngenetics'>Instagram</a></p>
     </div>
   )
 }

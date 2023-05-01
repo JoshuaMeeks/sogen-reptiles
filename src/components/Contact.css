@@ -1,0 +1,20 @@
+.contact-form {
+    width: 30%;
+}
+
+.contact-form > div > label {
+    font-size: 1.2em;
+    font-family: sans-serif;
+    border: solid red 1px;
+    margin-bottom: 2em;
+}
+
+.contact-form > div > input {
+    height: 30px;
+    width: 100%;
+}
+
+.contact-form > div > textarea {
+    height: 90px;
+    width: 100%;
+}
