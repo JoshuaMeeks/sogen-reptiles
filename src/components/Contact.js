@@ -25,7 +25,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className="title-container">
+    <div className="contact-container">
       <h1 className="title">contact us</h1>
       <p>
         You can contact us via email at <a href="#">contact@sogenreptiles.com</a>, or fill out this form:
