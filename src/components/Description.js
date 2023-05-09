@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { ImageCarousel } from './ImageCarousel';
 import { ImgModal } from './ImgModal';
 
-export const Description = ({ availability, modal, setModal, toggleModal }) => {
+export const Description = ({ availability, modal, setModal, toggleModal, cart, setCart }) => {
   const { id } = useParams();
 
   const available = availability.filter(available => available.id === id);
@@ -41,7 +41,10 @@ export const Description = ({ availability, modal, setModal, toggleModal }) => {
         <p>Weight: {available[0].weight}</p>
         <p>Price: <span className='price-styling'>{available[0].price}</span></p>
         <p>{available[0].descriptor}</p>
-        <button>Add to Cart</button>
+        <button onClick={() => {
+          cart.push(available[0]);
+          console.log(cart);
+        }}>Add to Cart</button>
       </div>
     </div>
   )

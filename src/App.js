@@ -26,7 +26,7 @@ function App() {
   const unsexedAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'unsexed'))
   };
-  const [modal, setModal] = useState(true);
+  const [modal, setModal] = useState(false);
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -110,6 +110,8 @@ function App() {
                   modal={modal}
                   setModal={setModal}
                   toggleModal={toggleModal}
+                  cart={cart}
+                  setCart={setCart}
                 />
               </div>
             } 
@@ -123,7 +125,10 @@ function App() {
           <Route
             path="/cart"
             element={
-              <Cart />
+              <Cart 
+                cart={cart}
+                setCart={setCart}
+              />
             }
           />
           <Route 
