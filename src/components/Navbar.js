@@ -19,6 +19,7 @@ export const Navbar = () => {
           <Link to="/available"><li>available</li></Link>
           <Link to="/termsconditions"><li>terms and conditions</li></Link>
           <Link to="/contact"><li>contact</li></Link>
+          <Link to="/cart">cart</Link>
         </ul>
       </nav>
     </header>

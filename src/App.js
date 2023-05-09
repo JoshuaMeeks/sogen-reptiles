@@ -9,6 +9,7 @@ import { Contact } from "./components/Contact";
 import { TermsConditions } from "./components/TermsConditions";
 import { Shipping } from "./components/Shipping";
 import { Card } from "./components/Card";
+import { Cart } from "./components/Cart";
 import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import { Footer } from "./components/Footer";
@@ -29,6 +30,7 @@ function App() {
   const toggleModal = () => {
     setModal(!modal);
   };
+  const [cart, setCart] = useState([]);
 
   return (
     <div className="page-container">
@@ -116,6 +118,12 @@ function App() {
             path="/undefined" 
             element={
               <Error />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <Cart />
             }
           />
           <Route 
