@@ -15,7 +15,8 @@
     "imgs": ["/resources/IMG_0413.jpg"],
     "dob": "02/23/21",
     "weight": "2g",
-    "sex": "female"
+    "sex": "female",
+    "price": "600"
   },
   {
     "id": "JC-072320",
