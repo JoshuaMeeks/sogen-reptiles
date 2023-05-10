@@ -16,48 +16,54 @@
     "dob": "02/23/21",
     "weight": "2g",
     "sex": "female",
-    "price": "600"
+    "price": "700"
   },
   {
     "id": "JC-072320",
     "imgs": ["/resources/IMG_0405.jpg"],
     "dob": "02/23/21",
     "weight": "3g",
-    "sex": "male"
+    "sex": "male",
+    "price": "900"
   },
   {
     "id": "JC-041421",
     "imgs": ["/resources/IMG_0408.jpg"],
     "dob": "02/23/21",
     "weight": "4g",
-    "sex": "female"
+    "sex": "female",
+    "price": "1200"
   },
   {
     "id": "JC-062321",
     "imgs": ["/resources/IMG_0409.jpg"],
     "dob": "02/23/21",
     "weight": "5g",
-    "sex": "male"
+    "sex": "male",
+    "price": "1400"
   },
   {
     "id": "JC-082321",
     "imgs": ["/resources/IMG_0410.jpg"],
     "dob": "02/23/21",
     "weight": "6g",
-    "sex": "female"
+    "sex": "female",
+    "price": "1000"
   },
   {
     "id": "JC-092321",
     "imgs": ["/resources/IMG_0411.jpg"],
     "dob": "02/23/21",
     "weight": "7g",
-    "sex": "male"
+    "sex": "male",
+    "price": "1200"
   },
   {
     "id": "JC-102321",
     "imgs": ["/resources/IMG_0412.jpg"],
     "dob": "02/23/21",
     "weight": "8g",
-    "sex": "female"
+    "sex": "female",
+    "price": "900"
   }
 ]
