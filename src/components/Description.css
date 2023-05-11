@@ -11,8 +11,12 @@
   font-weight: 400;
 }
 
-.description > * {
-  margin: 1rem;
+.description > h1, p {
+  margin: 1em 0 1em 0;
+}
+
+.descriptor {
+  margin: 2em 0 2em 0;
 }
 
 .description > button {
@@ -61,6 +65,15 @@
   width: 10em;
   height: 10em;
   cursor: pointer;
+}
+
+.cart-message-container {
+  text-align: center;
+  justify-content: center;
+}
+
+.cart-message-container > p {
+  font-weight: 600;
 }
 
 @media (max-width: 500px) {

@@ -11,10 +11,18 @@ export const Description = ({ availability, modal, setModal, toggleModal, cart, 
   const {imgs} = available[0];
   const [selected, setSelected] = useState(imgs[0]);
   const [unselected, setUnselected] = useState(imgs.filter(img => img !== selected));
+  const [addedToCart, setAddedToCart] = useState(false);
 
   useEffect(() => {
     setUnselected(imgs.filter(img => img !== selected))
   }, selected)
+
+  const addedToCartMessage = () => {
+    setAddedToCart(true)
+    setTimeout(() => {
+      setAddedToCart(false)
+    }, 2000)
+  };
 
   return (
     <div className="description-container">
@@ -40,10 +48,12 @@ export const Description = ({ availability, modal, setModal, toggleModal, cart, 
         <p>D.O.B: {available[0].dob}</p>
         <p>Weight: {available[0].weight}</p>
         <p>Price: <span className='price-styling'>${available[0].price}.00</span></p>
-        <p>{available[0].descriptor}</p>
+        <p className='descriptor'>{available[0].descriptor}</p>
         <button onClick={() => {
-          setCart([...cart, available[0]])
+          addedToCartMessage();
+          setCart([...cart, available[0]]);
         }}>Add to Cart</button>
+        {(addedToCart) ? <div className='cart-message-container'><p>Added to your cart</p></div> : null}
       </div>
     </div>
   )
