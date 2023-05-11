@@ -50,8 +50,18 @@ export const Description = ({ availability, modal, setModal, toggleModal, cart, 
         <p>Price: <span className='price-styling'>${available[0].price}.00</span></p>
         <p className='descriptor'>{available[0].descriptor}</p>
         <button className={(addedToCart) ? 'added-to-cart-btn' : 'add-to-cart-btn' } onClick={() => {
-          addedToCartMessage();
-          setCart([...cart, available[0]]);
+          if (cart.length === 0) {
+            addedToCartMessage();
+            setCart([...cart, available[0]]);
+          }
+          if (cart.length > 0) {
+            cart.map(item => {if (item.id === available[0].id) {
+              return null
+            } else {
+              addedToCartMessage();
+              setCart([...cart, available[0]]);
+            }})
+          }
         }}>{(addedToCart) ? 'Added to cart' : 'Add to cart'}</button>
       </div>
     </div>
