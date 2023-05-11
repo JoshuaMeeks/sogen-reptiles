@@ -19,16 +19,23 @@
   margin: 2em 0 2em 0;
 }
 
-.description > button {
+.add-to-cart-btn {
   width: 100%;
   background-color: dodgerblue;
   border: none;
   color: #ffffff;
   font-size: 1.2em;
   padding: .6em;
+  cursor: pointer;
 }
 
-.description > button {
+.added-to-cart-btn {
+  width: 100%;
+  background-color: rgb(136, 195, 255);
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: .6em;
   cursor: pointer;
 }
 
@@ -65,15 +72,6 @@
   width: 10em;
   height: 10em;
   cursor: pointer;
-}
-
-.cart-message-container {
-  text-align: center;
-  justify-content: center;
-}
-
-.cart-message-container > p {
-  font-weight: 600;
 }
 
 @media (max-width: 500px) {
