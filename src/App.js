@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="page-container">
-      <Navbar />
+      <Navbar cart={cart} />
       <div className="content">
         <Routes>
           <Route 

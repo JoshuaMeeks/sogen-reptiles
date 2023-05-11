@@ -2,7 +2,8 @@ import React from 'react';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
+export const Navbar = ({ cart }) => {
+
   return (
     <header className="header">
       <nav>
@@ -19,9 +20,10 @@ export const Navbar = () => {
           <Link to="/available"><li>available</li></Link>
           <Link to="/termsconditions"><li>terms and conditions</li></Link>
           <Link to="/contact"><li>contact</li></Link>
-          <Link to="/cart">cart</Link>
+          <Link to="/cart">cart<sup>{cart.length === 0 ? '' : cart.length}</sup></Link>
         </ul>
       </nav>
     </header>
   )
+  
 }

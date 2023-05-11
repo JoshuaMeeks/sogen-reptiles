@@ -44,3 +44,7 @@ nav {
   color: #FFFFFF;
   text-decoration: none;
 }
+
+sup {
+  font-size: .8em;
+}

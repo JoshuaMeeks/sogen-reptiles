@@ -20,6 +20,7 @@
   },
   {
     "id": "JC-072320",
+    "morph": "Lilly White",
     "imgs": ["/resources/IMG_0405.jpg"],
     "dob": "02/23/21",
     "weight": "3g",
@@ -28,22 +29,25 @@
   },
   {
     "id": "JC-041421",
+    "morph": "High Coverage Yellow",
     "imgs": ["/resources/IMG_0408.jpg"],
     "dob": "02/23/21",
     "weight": "4g",
     "sex": "female",
-    "price": "1200"
+    "price": "1400"
   },
   {
     "id": "JC-062321",
+    "morph": "Orange Pinstripe with Portholes",
     "imgs": ["/resources/IMG_0409.jpg"],
     "dob": "02/23/21",
     "weight": "5g",
     "sex": "male",
-    "price": "1400"
+    "price": "700"
   },
   {
     "id": "JC-082321",
+    "morph": "Abnormal Yellow Lilly White",
     "imgs": ["/resources/IMG_0410.jpg"],
     "dob": "02/23/21",
     "weight": "6g",
@@ -52,6 +56,7 @@
   },
   {
     "id": "JC-092321",
+    "morph": "Darkbase Lilly White",
     "imgs": ["/resources/IMG_0411.jpg"],
     "dob": "02/23/21",
     "weight": "7g",
@@ -60,6 +65,7 @@
   },
   {
     "id": "JC-102321",
+    "morph": "Harlequin",
     "imgs": ["/resources/IMG_0412.jpg"],
     "dob": "02/23/21",
     "weight": "8g",

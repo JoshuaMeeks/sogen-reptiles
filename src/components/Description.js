@@ -39,11 +39,10 @@ export const Description = ({ availability, modal, setModal, toggleModal, cart, 
         <p>Sex: {available[0].sex}</p>
         <p>D.O.B: {available[0].dob}</p>
         <p>Weight: {available[0].weight}</p>
-        <p>Price: <span className='price-styling'>{available[0].price}</span></p>
+        <p>Price: <span className='price-styling'>${available[0].price}.00</span></p>
         <p>{available[0].descriptor}</p>
         <button onClick={() => {
-          cart.push(available[0]);
-          console.log(cart);
+          setCart([...cart, available[0]])
         }}>Add to Cart</button>
       </div>
     </div>
