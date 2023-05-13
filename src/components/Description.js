@@ -58,7 +58,6 @@ export const Description = ({ data, availability, modal, setModal, toggleModal, 
           onClick={() => {
             addedToCartMessage();
             let newCart = [...cart, available[0]]
-            // setCart([...cart, available[0]]);
             setCart(removeDuplicates(newCart));
           }}>
           {(addedToCart) ? 'Added to cart' : 'Add to cart'}

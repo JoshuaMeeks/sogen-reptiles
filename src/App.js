@@ -34,7 +34,11 @@ function App() {
 
   return (
     <div className="page-container">
-      <Navbar cart={cart} />
+      <Navbar 
+        data={data}
+        cart={cart}
+        setAvailability={setAvailability}
+      />
       <div className="content">
         <Routes>
           <Route 
