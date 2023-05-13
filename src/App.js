@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import './App.css';
 import data from './data.json';
@@ -112,6 +112,7 @@ function App() {
                   toggleModal={toggleModal}
                   cart={cart}
                   setCart={setCart}
+                  data={data}
                 />
               </div>
             } 

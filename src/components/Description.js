@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { ImageCarousel } from './ImageCarousel';
 import { ImgModal } from './ImgModal';
 
-export const Description = ({ availability, modal, setModal, toggleModal, cart, setCart }) => {
+export const Description = ({ data, availability, modal, setModal, toggleModal, cart, setCart }) => {
   const { id } = useParams();
 
   const available = availability.filter(available => available.id === id);
@@ -23,6 +23,10 @@ export const Description = ({ availability, modal, setModal, toggleModal, cart, 
       setAddedToCart(false)
     }, 2000)
   };
+
+  const removeDuplicates = (data) => {
+    return data.reduce((acc, curr) => acc.includes(curr) ? acc : [...acc, curr], []);
+  }
 
   return (
     <div className="description-container">
@@ -49,20 +53,16 @@ export const Description = ({ availability, modal, setModal, toggleModal, cart, 
         <p>Weight: {available[0].weight}</p>
         <p>Price: <span className='price-styling'>${available[0].price}.00</span></p>
         <p className='descriptor'>{available[0].descriptor}</p>
-        <button className={(addedToCart) ? 'added-to-cart-btn' : 'add-to-cart-btn' } onClick={() => {
-          if (cart.length === 0) {
+        <button 
+          className={(addedToCart) ? 'added-to-cart-btn' : 'add-to-cart-btn'} 
+          onClick={() => {
             addedToCartMessage();
-            setCart([...cart, available[0]]);
-          }
-          if (cart.length > 0) {
-            cart.map(item => {if (item.id === available[0].id) {
-              return null
-            } else {
-              addedToCartMessage();
-              setCart([...cart, available[0]]);
-            }})
-          }
-        }}>{(addedToCart) ? 'Added to cart' : 'Add to cart'}</button>
+            let newCart = [...cart, available[0]]
+            // setCart([...cart, available[0]]);
+            setCart(removeDuplicates(newCart));
+          }}>
+          {(addedToCart) ? 'Added to cart' : 'Add to cart'}
+        </button>
       </div>
     </div>
   )
