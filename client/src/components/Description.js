@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom';
 import { ImageCarousel } from './ImageCarousel';
 import { ImgModal } from './ImgModal';
 
-export const Description = ({ data, availability, modal, setModal, toggleModal, cart, setCart }) => {
+export const Description = ({ data, modal, setModal, toggleModal, cart, setCart }) => {
   const { id } = useParams();
 
-  const available = availability.filter(available => available.id === id);
+  const available = data.filter(available => available.id === id);
   const {imgs} = available[0];
   const [selected, setSelected] = useState(imgs[0]);
   const [unselected, setUnselected] = useState(imgs.filter(img => img !== selected));
@@ -15,7 +15,7 @@ export const Description = ({ data, availability, modal, setModal, toggleModal, 
 
   useEffect(() => {
     setUnselected(imgs.filter(img => img !== selected))
-  }, selected)
+  }, [selected, imgs])
 
   const addedToCartMessage = () => {
     setAddedToCart(true)

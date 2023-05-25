@@ -1,21 +1,30 @@
 import { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import './App.css';
-import data from './data.json';
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { TermsConditions } from "./components/TermsConditions";
 import { Shipping } from "./components/Shipping";
+import { Available } from "./components/Available";
 import { Card } from "./components/Card";
 import { Cart } from "./components/Cart";
 import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import { Footer } from "./components/Footer";
-import { Availability } from "./components/Availability";
+import { Success } from "./components/Success";
 
 function App() {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("http://localhost:5000/available")
+      .then((res) => res.json())
+      .then((data) => setData(data.available))
+      .then((data) => setAvailability(data))
+  }, [])
+
   const [availability, setAvailability] = useState(data);
   const maleAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'male'))
@@ -26,6 +35,7 @@ function App() {
   const unsexedAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'unsexed'))
   };
+
   const [modal, setModal] = useState(false);
   const toggleModal = () => {
     setModal(!modal);
@@ -37,17 +47,14 @@ function App() {
       <Navbar 
         data={data}
         cart={cart}
-        setAvailability={setAvailability}
+        setAvailablility={setAvailability}
       />
       <div className="content">
         <Routes>
           <Route 
             path="/" 
             element={
-              <Hero 
-                setAvailability={setAvailability}
-                data={data}
-              />
+              <Hero />
             } 
           />
           <Route
@@ -77,32 +84,33 @@ function App() {
           <Route 
             path="/available" 
             element={
-            <>
-              <Availability 
-                data={data}
-                setAvailability={setAvailability} 
-                maleAvailability={maleAvailability}
-                femaleAvailability={femaleAvailability}
-                unsexedAvailability={unsexedAvailability}
-              />
-              <div className="card-container">
-                {availability.map(available => {
-                  return (
-                    <Card 
-                      key={available.id}
-                      imgs={available.imgs}
-                      id={available.id}
-                    />
-                  )
-                })}
-              </div>
-            </>
-          } />
+              <>
+                <Available 
+                  data={data}
+                  setAvailability={setAvailability} 
+                  maleAvailability={maleAvailability}
+                  femaleAvailability={femaleAvailability}
+                  unsexedAvailability={unsexedAvailability}
+                />
+                <div className="card-container">
+                  {availability && availability.map(available => {
+                    return (
+                      <Card 
+                        key={available.id}
+                        imgs={available.imgs}
+                        id={available.id}
+                      />
+                    )
+                  })}
+                </div>
+              </>
+            } 
+          />
           <Route 
             path="/available/:id" 
             element={
               <div className="product-container">
-                <Availability 
+                <Available 
                 data={data}
                 setAvailability={setAvailability} 
                 maleAvailability={maleAvailability}
@@ -110,7 +118,6 @@ function App() {
                 unsexedAvailability={unsexedAvailability}
                 />
                 <Description
-                  availability={availability}
                   modal={modal}
                   setModal={setModal}
                   toggleModal={toggleModal}
@@ -135,6 +142,12 @@ function App() {
                 setCart={setCart}
               />
             }
+          />
+          <Route 
+            path="/success"
+            element={
+              <Success />
+            } 
           />
           <Route 
             path="*" 

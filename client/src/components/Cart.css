@@ -43,3 +43,15 @@
 .total-amount-container {
   margin-top: .4em;
 }
+
+.checkout-button {
+  font-size: 1.2em;
+  color: #ffffff;
+  background-color: dodgerblue;
+  font-size: 1.2em;
+  border: none;
+  width: 10em;
+  height: 40px;
+  align-self: center;
+  cursor: pointer;
+}

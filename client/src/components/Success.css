@@ -1,0 +1,8 @@
+.success-container {
+  font-family: sans-serif;
+  color: rgb(21, 82, 44);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
