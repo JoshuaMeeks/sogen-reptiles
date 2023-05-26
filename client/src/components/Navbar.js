@@ -29,7 +29,7 @@ export const Navbar = ({ data, cart, setAvailablility }) => {
           <Link to="/available"><li onClick={() => setAvailablility(data)}>available</li></Link>
           <Link to="/termsconditions"><li>terms & conditions</li></Link>
           <Link to="/contact"><li>contact</li></Link>
-          <Link to="/cart">cart<sup>{cart.length === 0 ? '' : cart.length}</sup></Link>
+          <Link to="/cart">cart{cart.length === 0 ? '' : '(' + cart.length + ')'}</Link>
         </ul>
         <ul className='mobile-links'>
           <svg onClick={() => toggleNavModal()} xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

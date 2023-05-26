@@ -65,10 +65,6 @@ nav {
   text-decoration: none;
 }
 
-sup {
-  font-size: .8em;
-}
-
 .short-text {
   display: none;
 }
@@ -95,7 +91,7 @@ sup {
   }
 }
 
-@media (max-width: 945px) {
+@media (max-width: 956px) {
   .short-text {
       display: block;
     }
