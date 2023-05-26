@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const Available = ({ maleAvailability, data, setAvailability, femaleAvailability, unsexedAvailability }) => {
   return (
+    data &&
     <div className='title-container available-container'>
       <ul className='available-links'>
         <li onClick={() => setAvailability(data)}><Link to="/available">all({data.length})</Link></li>

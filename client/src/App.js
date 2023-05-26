@@ -14,18 +14,24 @@ import { Error } from "./components/Error";
 import { Description } from "./components/Description";
 import { Footer } from "./components/Footer";
 import { Success } from "./components/Success";
+import { Loading } from "./components/Loading";
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState(null);
+
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch("http://localhost:5000/available")
       .then((res) => res.json())
       .then((data) => setData(data.available))
       .then((data) => setAvailability(data))
+      .then(() => setLoading(false))
   }, [])
 
   const [availability, setAvailability] = useState(data);
+
   const maleAvailability = () => {
     setAvailability(data.filter(available => available.sex === 'male'))
   };
@@ -104,7 +110,7 @@ function App() {
                   })}
                 </div>
               </>
-            } 
+            }
           />
           <Route 
             path="/available/:id" 
