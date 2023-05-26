@@ -35,7 +35,9 @@ export const ImgModal = ({ modal, selected, unselected, toggleModal }) => {
     return (
       <div className='modal-background' onClick={() => toggleModal()}>
         <div className='modal-container' onClick={e => e.stopPropagation()}>
-          <button className='close-btn' onClick={() => toggleModal()}>&times;</button>
+          <div className='close-btn-container'>
+            <button className='close-btn' onClick={() => toggleModal()}>&times;</button>
+          </div>
           <div>
             <BsChevronLeft className='chevron' onClick={() => previousImage()} />
             <img className='modal-selected-img' src={modalSelected} alt="gecko" />

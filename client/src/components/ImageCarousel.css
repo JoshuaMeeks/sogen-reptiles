@@ -1,9 +1,5 @@
 .selected-img {
-  width: 25em;
-}
-
-.unselected-img-container {
-  text-align: center;
+  width: 100%;
 }
 
 .unselected-img {

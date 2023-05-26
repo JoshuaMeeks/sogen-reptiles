@@ -30,7 +30,7 @@ export const Description = ({ data, modal, setModal, toggleModal, cart, setCart 
 
   return (
     <div className="description-container">
-      <ImageCarousel 
+      <ImageCarousel
         imgs={imgs}
         selected={selected}
         setSelected={setSelected}

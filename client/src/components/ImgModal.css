@@ -12,13 +12,18 @@
 }
 
 .modal-container {
-  display: flex;
-  flex-direction: column;
+  width: 50%;
+  min-width: 400px;
 }
 
 .modal-container > div {
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.close-btn-container {
+  justify-content: end !important;
 }
 
 .close-btn {
@@ -27,7 +32,6 @@
   color: #ffffff;
   font-size: 2em;
   width: 1em;
-  align-self: end;
   cursor: pointer;
   margin-right: 2em;
 }
@@ -39,12 +43,6 @@
 }
 
 .modal-selected-img {
-  width: 40em;
-}
-
-.modal-unselected-img {
-  margin: .6em;
-  width: 10em;
-  height: 10em;
-  cursor: pointer;
+  width: 100%;
+  min-width: 300px;
 }

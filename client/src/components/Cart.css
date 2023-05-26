@@ -5,10 +5,18 @@
   color: rgb(21, 82, 44);
   font-family: sans-serif;
   gap: 1em;
+  min-width: 300px;
 }
 
 .cart-container {
   margin-bottom: 8em;
+}
+
+.empty-cart-text {
+  text-align: center;
+  min-width: 300px;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .checkout-thumbnail {
@@ -24,7 +32,6 @@
 
 .remove-btn {
   cursor: pointer;
-  margin-bottom: .2em;
 }
 
 .empty-cart {

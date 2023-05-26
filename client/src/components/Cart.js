@@ -23,11 +23,6 @@ export const Cart = ({ cart, setCart }) => {
 
     const { data } = await axios.post('http://localhost:5000/create-checkout-session', {lineItems})
     window.location = data
-
-    // const stripe = await stripePromise
-
-    // await stripe.redirectToCheckout({sessionId: data})
-    console.log(data)
   }
 
   const removeFromCart = (id) => {
@@ -38,7 +33,7 @@ export const Cart = ({ cart, setCart }) => {
     return (
       <div className="title-container cart-container">
         <h1 className="title">cart</h1>
-        <p>Your cart is currently empty.</p>
+        <p className='empty-cart-text'>Your cart is currently empty.</p>
       </div>
     )
   } else {
