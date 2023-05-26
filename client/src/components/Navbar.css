@@ -12,17 +12,17 @@ nav {
   justify-content: space-between;
 }
 
-.logo > a {
+.logo {
   display: flex;
   align-items: center;
   gap: 2em;
 }
 
-.logo > a > img {
+.logo > img {
   width: 2.4em;
 }
 
-.logo > a > span {
+.logo > span {
   font-family: 'Source Code Pro', monospace;
   font-weight: 400;
   letter-spacing: .5em;
@@ -40,6 +40,26 @@ nav {
   color: #FFFFFF;
 }
 
+.mobile-links {
+  display: none;
+}
+
+.mobile-nav-menu {
+  background-color: #FFFFFF;
+  border: solid 2px rgb(21, 82, 44);
+  padding: 1em;
+  font-size: 1.2em;
+  display: none;
+  position: absolute;
+  top: 130px;
+  right: 0px;
+}
+
+.mobile-nav-menu > ul > a {
+  color: rgb(21, 82, 44);
+  list-style: none;
+}
+
 .links > a {
   color: #FFFFFF;
   text-decoration: none;
@@ -47,4 +67,40 @@ nav {
 
 sup {
   font-size: .8em;
+}
+
+.short-text {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .links {
+    display: none;
+  }
+
+  .mobile-links {
+    display: flex;
+    align-items: center;
+    margin-top: 4em;
+    gap: .8em;
+    color: #FFFFFF;
+  }
+
+  .mobile-links > a {
+    color: #FFFFFF;
+  }
+
+  .mobile-nav-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 945px) {
+  .short-text {
+      display: block;
+    }
+  
+  .full-text {
+    display: none;
+  }
 }
