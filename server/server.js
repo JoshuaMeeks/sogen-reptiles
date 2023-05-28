@@ -93,6 +93,33 @@ app.get("/available", (req, res) => {
 app.post('/create-checkout-session', async(req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
+
+      shipping_address_collection: {
+        allowed_countries: ['US'],
+      },
+      shipping_options: [
+        {
+          shipping_rate_data: {
+            type: 'fixed_amount',
+            fixed_amount: {
+              amount: 5000,
+              currency: 'usd',
+            },
+            display_name: 'Next day air',
+            delivery_estimate: {
+              minimum: {
+                unit: 'business_day',
+                value: 1,
+              },
+              maximum: {
+                unit: 'business_day',
+                value: 1,
+              },
+            },
+          },
+        },
+      ],
+
       line_items: req.body.lineItems,
       mode: 'payment',
       payment_method_types: ['card'],

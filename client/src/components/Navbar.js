@@ -38,7 +38,7 @@ export const Navbar = ({ data, cart, setAvailablility }) => {
           {mobileNavMenu ? 
             <div className='mobile-nav-menu'>
               <ul>
-                <Link to="/available"><li onClick={() => {setAvailablility(data);{toggleNavModal()}}}>available</li></Link>
+                <Link to="/available"><li onClick={() => {setAvailablility(data);toggleNavModal()}}>available</li></Link>
                 <Link to="/termsconditions"><li onClick={() => toggleNavModal()}>terms and conditions</li></Link>
                 <Link to="/contact"><li onClick={() => toggleNavModal()}>contact</li></Link>
               </ul>

@@ -16,8 +16,8 @@ export const Cart = ({ cart, setCart }) => {
             name: item.morph
           },
           unit_amount: item.price * 100
-        },
-        quantity: 1
+        }, 
+        quantity: 1,
       }
     })
 
