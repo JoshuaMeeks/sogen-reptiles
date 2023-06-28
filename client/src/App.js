@@ -20,9 +20,8 @@ function App() {
 
   useEffect(() => {
     fetch("http://localhost:5000/available")
-      .then((res) => res.json())
-      .then((data) => setData(data.available))
-      .then((data) => setAvailability(data))
+    .then(res => res.json())
+    .then(data => setData(data))
   }, [])
 
   const [availability, setAvailability] = useState(null);

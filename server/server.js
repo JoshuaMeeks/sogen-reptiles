@@ -1,96 +1,36 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
-const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
+const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"))
-app.use(express.urlencoded({extended: true}))
+app.use(express.static("public"));
+app.use(express.urlencoded({extended: true}));
 
-app.get("/available", (req, res) => {
-  res.json({ available: 
-    [
+let inventoryDB = [
   {
-    "id": "JC-022321",
-    "morph": "Yellow Lilly White",
-    "imgs": ["/resources/IMG_0403.jpg", "/resources/IMG_0413.jpg", "/resources/IMG_0405.jpg", "/resources/IMG_0408.jpg"],
-    "dob": "02/23/21",
-    "weight": "14g",
-    "sex": "male",
-    "descriptor": "The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/esl",
-    "price": "1200"
-  },
-  {
-    "id": "JC-041220",
-    "morph": "Darkbase Harlequin",
-    "imgs": ["/resources/IMG_0413.jpg"],
-    "dob": "02/23/21",
-    "weight": "2g",
-    "sex": "female",
-    "price": "700"
-  },
-  {
-    "id": "JC-072320",
-    "morph": "Lilly White",
-    "imgs": ["/resources/IMG_0405.jpg"],
-    "dob": "02/23/21",
-    "weight": "3g",
-    "sex": "male",
-    "price": "900"
-  },
-  {
-    "id": "JC-041421",
-    "morph": "High Coverage Yellow",
-    "imgs": ["/resources/IMG_0408.jpg"],
-    "dob": "02/23/21",
-    "weight": "4g",
-    "sex": "female",
-    "price": "1400"
-  },
-  {
-    "id": "JC-062321",
-    "morph": "Orange Pinstripe with Portholes",
-    "imgs": ["/resources/IMG_0409.jpg"],
-    "dob": "02/23/21",
-    "weight": "5g",
-    "sex": "male",
-    "price": "700"
-  },
-  {
-    "id": "JC-082321",
-    "morph": "Abnormal Yellow Lilly White",
-    "imgs": ["/resources/IMG_0410.jpg"],
-    "dob": "02/23/21",
-    "weight": "6g",
-    "sex": "female",
-    "price": "1000"
-  },
-  {
-    "id": "JC-092321",
+    "id": "JC-022022",
     "morph": "Darkbase Lilly White",
-    "imgs": ["/resources/IMG_0411.jpg"],
-    "dob": "02/23/21",
-    "weight": "7g",
+    "imgs": ["/resources/IMG_0475.jpg", "/resources/IMG_0474.jpg", "/resources/IMG_0473.jpg", "/resources/IMG_0466.jpg", "/resources/IMG_4070"],
+    "dob": "02/20/22",
+    "weight": "20g",
     "sex": "male",
-    "price": "1200"
-  },
-  {
-    "id": "JC-102321",
-    "morph": "Harlequin",
-    "imgs": ["/resources/IMG_0412.jpg"],
-    "dob": "02/23/21",
-    "weight": "8g",
-    "sex": "female",
-    "price": "900"
+    "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). Feeding great on crickets and Pangea.",
+    "price": "500"
   }
 ]
 
- });
+
+app.get('/available', (req, res) => {
+  res.send(inventoryDB);
 });
 
 app.post('/create-checkout-session', async(req, res) => {
+  const { lineItems, productIDs } = req.body;
+
   try {
     const session = await stripe.checkout.sessions.create({
 
@@ -120,16 +60,37 @@ app.post('/create-checkout-session', async(req, res) => {
         },
       ],
 
-      line_items: req.body.lineItems,
+      line_items: lineItems,
       mode: 'payment',
       payment_method_types: ['card'],
       success_url: 'http://localhost:3000/success',
-      cancel_url: 'http://localhost:3000'
+      cancel_url: 'http://localhost:3000',
+      payment_intent_data: { metadata: productIDs }
     })
-    return res.status(201).json(session.url)
+    return res.status(201).json(session.url);
   } catch (error) {
-    return res.status(500).json(error)
+    return res.status(500).json(error);
   }
-})
+});
 
-app.listen(process.env.PORT, () => console.log('Server is running successfully'))
+app.post('/webhooks', async (req, res) => {
+  const event = req.body;
+  switch(event.type) {
+    case 'payment_intent.succeeded':
+    soldInventoryObjectsList = event.data.object.metadata;
+    const soldInventory = [];
+    for (let i = 0; i < Object.keys(soldInventoryObjectsList).length; i++) {
+      soldInventory.push(soldInventoryObjectsList[i]);
+    }
+    let updatedList = inventoryDB.filter(item => !soldInventory.includes(item.id));
+    inventoryDB = updatedList
+    console.log(updatedList);
+      break;
+    default:
+      return res.status(400).end();
+  }
+  
+  res.json({received: true});
+});
+
+app.listen(process.env.PORT, () => console.log(`Server is running successfully on port ${process.env.PORT}`))
