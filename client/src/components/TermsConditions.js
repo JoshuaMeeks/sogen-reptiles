@@ -31,7 +31,7 @@ export const TermsConditions = () => {
             Shipping temperatures must be between 60 degrees fahrenheit at the lowest and 90 degrees fahrenheit at the highest.
           </li><br/>
         </ul><br/><br/>
-        <p>To schedule a shipment please email us at <a href='#'>shipping@sogenreptiles.com</a> or <Link to='/contact'>click here</Link>.</p>
+        <p>To schedule a shipment please email us at <a href='mailto:sogenreptiles@gmail.com'>sogenreptiles@gmail.com</a> or <Link to='/contact'>click here</Link>.</p>
       </p>
     </div>
   )

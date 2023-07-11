@@ -1,50 +1,28 @@
-import React, { useState } from 'react';
 import './Contact.css';
 
 export const Contact = () => {
-  const [status, setStatus] = useState("Submit");
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
-  };
 
   return (
     <div className="contact-container">
       <h1 className="title">contact us</h1>
       <p>
-        You can contact us via email at <a href="#">contact@sogenreptiles.com</a>, or fill out this form:
+        You can contact us via email at <a href="mailto:sogenreptiles@gmail.com">sogenreptiles@gmail.com</a>, or fill out this form:
       </p>
 
-      <form onSubmit={handleSubmit} className='contact-form'>
+      <form className='contact-form' action='https://getform.io/f/8b178fa8-e5dc-4c04-a427-6f81f86a8e27' method="POST">
         <div>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" required />
+          <input type="text" id="name" name='name' required />
         </div>
         <div>
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" required />
+          <input type="email" id="email" name='email' required />
         </div>
         <div>
           <label htmlFor="message">Message:</label>
-          <textarea id="message" required />
+          <textarea id="message" name='message' required />
         </div>
-        <button type="submit">{status}</button>
+        <button type="submit">Send</button>
       </form>
 
       <p>Visit us on <a href='https://www.instagram.com/southerngenetics'>Instagram</a></p>

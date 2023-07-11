@@ -21,7 +21,7 @@ export const Cart = ({ cart, setCart }) => {
       }
     })
 
-    const { data } = await axios.post('http://localhost:5000/create-checkout-session', {lineItems, productIDs})
+    const { data } = await axios.post(`${process.env.REACT_APP_SOGEN_EXPRESS}/create-checkout-session`, {lineItems, productIDs})
     window.location = data
   }
 

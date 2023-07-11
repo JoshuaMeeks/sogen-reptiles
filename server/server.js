@@ -14,13 +14,23 @@ let inventoryDB = [
   {
     "id": "JC-022022",
     "morph": "Darkbase Lilly White",
-    "imgs": ["/resources/IMG_0475.jpg", "/resources/IMG_0474.jpg", "/resources/IMG_0473.jpg", "/resources/IMG_0466.jpg", "/resources/IMG_4070"],
+    "imgs": ["/resources/JC-022022/IMG_0475.jpg", "/resources/JC-022022/IMG_0474.jpg", "/resources/JC-022022/IMG_0473.jpg", "/resources/JC-022022/IMG_0466.jpg", "/resources/JC-022022/IMG_4070.jpg"],
     "dob": "02/20/22",
     "weight": "20g",
     "sex": "male",
     "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). Feeding great on crickets and Pangea.",
     "price": "500"
-  }
+  },
+  {
+    "id": "JC-021422",
+    "morph": "Yellow Phantom Lilly White",
+    "imgs": ["/resources/JC-021422/IMG_0656.jpg", "/resources/JC-021422/IMG_0661.jpg", "/resources/JC-021422/IMG_0660.jpg", "/resources/JC-021422/IMG_0659.jpg"],
+    "dob": "02/14/22",
+    "weight": "19g",
+    "sex": "male",
+    "descriptor": "Out of Jerk (Northern Gecko) and Lags (Southern Genetics). An oddly patterned phantom lilly. I had a red one produced by this same pairing that I sold under the name of 'Splash'. This gecko is part of my work on a yellow phantom lilly line I've been working on for several seasons now.",
+    "price": "350"
+  },
 ]
 
 
