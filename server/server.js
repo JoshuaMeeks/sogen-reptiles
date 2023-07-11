@@ -24,7 +24,7 @@ let inventoryDB = [
   {
     "id": "JC-021422",
     "morph": "Yellow Phantom Lilly White",
-    "imgs": ["/resources/JC-021422/IMG_0656.jpg", "/resources/JC-021422/IMG_0661.jpg", "/resources/JC-021422/IMG_0660.jpg", "/resources/JC-021422/IMG_0659.jpg"],
+    "imgs": ["/resources/JL-021422/IMG_0656.jpg", "/resources/JL-021422/IMG_0661.jpg", "/resources/JL-021422/IMG_0660.jpg", "/resources/JL-021422/IMG_0659.jpg"],
     "dob": "02/14/22",
     "weight": "19g",
     "sex": "male",
