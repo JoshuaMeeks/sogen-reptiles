@@ -14,22 +14,83 @@ let inventoryDB = [
   {
     "id": "JC-022022",
     "morph": "Darkbase Lilly White",
-    "imgs": ["/resources/JC-022022/IMG_0475.jpg", "/resources/JC-022022/IMG_0474.jpg", "/resources/JC-022022/IMG_0473.jpg", "/resources/JC-022022/IMG_0466.jpg", "/resources/JC-022022/IMG_4070.jpg"],
+    "imgs": 
+      [
+        "/resources/JC-022022/IMG_0475.jpg", 
+        "/resources/JC-022022/IMG_0474.jpg", 
+        "/resources/JC-022022/IMG_0473.jpg", 
+        "/resources/JC-022022/IMG_0466.jpg", 
+        "/resources/JC-022022/IMG_4070.jpg"
+      ],
     "dob": "02/20/22",
     "weight": "20g",
     "sex": "male",
-    "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). Feeding great on crickets and Pangea.",
+    "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). Fires up an impressive dark black. Photos of this one as a hatchling can be found on our Instagram account. Feeding great on crickets and dry-mix.",
     "price": "500"
   },
   {
-    "id": "JC-021422",
+    "id": "JL-021422",
     "morph": "Yellow Phantom Lilly White",
-    "imgs": ["/resources/JL-021422/IMG_0656.jpg", "/resources/JL-021422/IMG_0661.jpg", "/resources/JL-021422/IMG_0660.jpg", "/resources/JL-021422/IMG_0659.jpg"],
+    "imgs": 
+      [
+        "/resources/JL-021422/phantomlw/IMG_0656.jpg", 
+        "/resources/JL-021422/phantomlw/IMG_0661.jpg", 
+        "/resources/JL-021422/phantomlw/IMG_0660.jpg", 
+        "/resources/JL-021422/phantomlw/IMG_0659.jpg"
+      ],
     "dob": "02/14/22",
     "weight": "19g",
     "sex": "male",
-    "descriptor": "Out of Jerk (Northern Gecko) and Lags (Southern Genetics). An oddly patterned phantom lilly. I had a red one produced by this same pairing that I sold under the name of 'Splash'. This gecko is part of my work on a yellow phantom lilly line I've been working on for several seasons now.",
+    "descriptor": "Out of Jerk (Northern Gecko) and Lags (Southern Genetics). An oddly patterned phantom lilly. I had a red one produced by this same pairing that I sold under the name of 'Splash'. This gecko is part of my work on a yellow phantom lilly line I've been working on for several seasons now. Feeding great on crickets and dry-mix.",
     "price": "350"
+  },
+  {
+    "id": "JB-012822",
+    "morph": "Dark Base Cream Harlequin",
+    "imgs": 
+      [
+        "/resources/JB-012822/jb012822/IMG_0677.jpg", 
+        "/resources/JB-012822/jb012822/IMG_0678.jpg", 
+        "/resources/JB-012822/jb012822/IMG_0679.jpg", 
+        "/resources/JB-012822/jb012822/IMG_0680.jpg"
+      ],
+    "dob": "01/28/22",
+    "weight": "22g",
+    "sex": "male",
+    "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). Fires up a very dark base with cream/off-white pattern. Feeding great on crickets and dry-mix.",
+    "price": "150"
+  },
+  {
+    "id": "JB-012822-2",
+    "morph": "Pastel Harlequin",
+    "imgs": 
+      [
+        "/resources/JB-012822-2/IMG_0685.jpg", 
+        "/resources/JB-012822-2/IMG_0682.jpg", 
+        "/resources/JB-012822-2/IMG_0681.jpg", 
+        "/resources/JB-012822-2/IMG_0683.jpg"
+      ],
+    "dob": "01/28/22",
+    "weight": "22g",
+    "sex": "male",
+    "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). The pattern on this one is so wacky. Pastel coloring with faint off-white lateral dashing. Feeding great on crickets and dry-mix.",
+    "price": "150"
+  },
+  {
+    "id": "JB-123021",
+    "morph": "Harlequin",
+    "imgs": 
+      [
+        "/resources/JB-123021/IMG_0691.jpg", 
+        "/resources/JB-123021/IMG_0693.jpg", 
+        "/resources/JB-123021/IMG_0692.jpg", 
+        "/resources/JB-123021/IMG_0694.jpg"
+      ],
+    "dob": "12/30/21",
+    "weight": "25g",
+    "sex": "female",
+    "descriptor": "Out of Jerk (Northern Gecko) and Buttercream (KC Geckos). Tailless female harlequin with faint brindling on the base and a few black spots.",
+    "price": "150"
   },
 ]
 
