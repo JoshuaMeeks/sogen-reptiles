@@ -13,6 +13,12 @@ SoGen Reptiles has been developed as a dedicated platform that allows us to dire
 - **Hosting:** Self-hosted on a VPS
 - **Web Server:** NGINX
 
+## Screenshots
+
+| ![Image 1]("https://i.ibb.co/7C6z0NZ/image1.jpg") | ![Image 2](link_to_second_image) |
+|:---:|:---:|
+| Caption for Image 1 | Caption for Image 2 |
+
 <img src="https://i.ibb.co/7C6z0NZ/image1.jpg" alt="Image 1" width="45%" align="left">
 <img src="https://i.ibb.co/g9W8tr0/image2.jpg" alt="Image 2" width="45%" align="right">
 
