@@ -14,14 +14,16 @@ SoGen Reptiles has been developed as a dedicated platform that allows us to dire
 - **Web Server:** NGINX
 
 ## Screenshots
-
 ### Desktop View
 
 ![Additional view](https://i.ibb.co/2NxPqXN/Screenshot-from-2023-10-28-12-42-59.png)
 
 ![Desktop view](https://i.ibb.co/DppFRtW/Screenshot-from-2023-10-28-12-26-25.png)
 
+---
+
 ### Mobile View
 
 | ![Mobile view](https://i.ibb.co/gmJLrD5/Screen-Shot-2023-10-10-at-10-25-27.png) | ![Another view](https://i.ibb.co/TvM8yWv/Screenshot-from-2023-10-28-12-51-02.png) |
 |:---:|:---:|
+
