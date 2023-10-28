@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SoGen Reptiles README</title>
-</head>
-<body>
+# SoGen Reptiles
 
-<h1>SoGen Reptiles</h1>
+## Short Description
+A website specializing in the sale of crested geckos, allowing users to purchase directly 
+from the inventory. It provides a dedicated platform to bypass restrictions and high seller 
+fees encountered on other platforms.
 
-<p><strong>Short Description:</strong> A dedicated website for buying crested geckos directly from the inventory, bypassing restrictions and high seller fees from other platforms.</p>
-
-<p><strong>Detailed Description:</strong> SoGen Reptiles is a specialized platform focused on the sale of crested geckos. The website aims to alleviate the challenges faced by sellers on conventional platforms, such as restrictive TOS agreements and high seller fees. It offers enhanced flexibility allowing for comprehensive inventory management without restrictions on volume. By utilizing SoGen Reptiles, sellers can efficiently reach their potential buyers directly, ensuring a streamlined buying process while substantially reducing seller fees by up to 80%.</p>
-
-</body>
-</html>
+## Detailed Description
+SoGen Reptiles solves a prevalent issue faced by sellers in complying with various sites' 
+Terms of Service (TOS) agreements, particularly those that may prohibit or limit the sale of 
+animals. It provides sellers the flexibility to manage their inventory without any imposed 
+restrictions, enabling a more streamlined and efficient sales process. One of the pivotal 
+advantages of using SoGen Reptiles is the significant reduction in seller fees by up to 80%, 
+promoting a more profitable and hassle-free selling experience.
 
