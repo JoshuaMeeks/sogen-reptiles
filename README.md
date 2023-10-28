@@ -15,10 +15,13 @@ SoGen Reptiles has been developed as a dedicated platform that allows us to dire
 
 ## Screenshots
 
-| ![Image 1]("https://i.ibb.co/7C6z0NZ/image1.jpg") | ![Image 2](link_to_second_image) |
+### Desktop View
+
+![Additional view](https://i.ibb.co/2NxPqXN/Screenshot-from-2023-10-28-12-42-59.png)
+
+![Desktop view](https://i.ibb.co/DppFRtW/Screenshot-from-2023-10-28-12-26-25.png)
+
+### Mobile View
+
+| ![Mobile view](https://i.ibb.co/gmJLrD5/Screen-Shot-2023-10-10-at-10-25-27.png) | ![Another view](https://i.ibb.co/TvM8yWv/Screenshot-from-2023-10-28-12-51-02.png) |
 |:---:|:---:|
-| Caption for Image 1 | Caption for Image 2 |
-
-<img src="https://i.ibb.co/7C6z0NZ/image1.jpg" alt="Image 1" width="45%" align="left">
-<img src="https://i.ibb.co/g9W8tr0/image2.jpg" alt="Image 2" width="45%" align="right">
-
