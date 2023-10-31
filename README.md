@@ -1,5 +1,7 @@
-![SoGen](/client/public/resources/logo.png) 
+<div align="center">![SoGen](/client/public/resources/logo.png) 
 # SoGen Reptiles
+[Visit site](https://www.sogenreptiles.com)
+</div>
 
 ## Short Description
 SoGen Reptiles is a proprietary e-commerce platform specializing in the sale of crested geckos from our exclusive inventory.
@@ -25,6 +27,6 @@ SoGen Reptiles has been developed as a dedicated platform that allows us to dire
 
 ### Mobile View
 
-| ![Mobile view](/client/public/resources/mobile1.png) | ![Another view](/client/public/resources/mobile2.png) |
+| ![Mobile view](/client/public/resources/mobile1.png) | ![Mobile view](/client/public/resources/mobile2.png) |
 |:---:|:---:|
 
