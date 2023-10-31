@@ -17,7 +17,7 @@ SoGen Reptiles has been developed as a dedicated platform that allows us to dire
 ## Screenshots
 ### Desktop View
 
-![Desktop view](/client/public/resources/desktop1.png)
+![Desktop view](/client/public/resources/logo.png)
 
 ![Desktop view](https://i.ibb.co/DppFRtW/Screenshot-from-2023-10-28-12-26-25.png)
 
