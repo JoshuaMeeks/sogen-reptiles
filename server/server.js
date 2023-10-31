@@ -95,7 +95,7 @@ let inventoryDB = [
 ]
 
 
-app.get('/available', (req, res) => {
+app.get('/', (req, res) => {
   res.send(inventoryDB);
 });
 
